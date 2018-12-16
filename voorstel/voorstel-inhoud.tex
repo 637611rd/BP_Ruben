@@ -2,11 +2,14 @@
 
 \section{Introductie} % The \section*{} command stops section numbering
 \label{sec:introductie}
-Binnen TVH is er dus heel wat input van data in de vorm van microservices. Heel wat componenten hebben deze data nodig. Maar het spreekt voor zich dat niet ieder component, alle data nodig heeft. Daarom maakt dit bedrijf voornamelijk gebruik van de technologie \emph{Kafka} om deze microservices te verwerken en door te geven naar de juiste componenten. Dit onderzoek zal nagaan of \emph{Kafka} inderdaad wel de beste technologie is om al deze data te verwerken. Aan de hand van deze vragen komt dit onderzoek hopelijk tot een besluit welke technologie het meest geschikt is:
+Binnen TVH is er dus heel wat input van data die via microservices naar de juiste componenten verstuurd worden. Het spreekt voor zich dat niet ieder component, alle data nodig heeft. Daarom maakt dit bedrijf voornamelijk gebruik van de technologie \emph{Kafka} om met deze microservices te werken. Dit onderzoek zal nagaan of \emph{Kafka} inderdaad wel de beste technologie is om al deze data te verwerken in dit bedrijf. Aan de hand van deze onderzoeksvraag en deelvragen komt dit onderzoek hopelijk tot een besluit welke technologie het meest geschikt is:
 \begin{itemize}
-\item Welke technologie kan het snelst kleine hoeveelheid data verwerken?
-\item Welke technologie kan het snelst grotere hoeveelheid data verwerken?
-\item Welke technologie is het meest gebruiksvriendelijk?
+    \item Welke technologie is het best om met microservices te werken voor het bedrijf TVH?
+    \begin{itemize}
+        \item Bestaan er nog alternatieven voor \emph{Kafka} en \emph{RabbitMq}?
+        \item Wat zijn de bevindingen van gebruikers?
+        \item Welke technologie is het snelst?
+    \end{itemize}
 \end{itemize}
 
 
@@ -18,7 +21,7 @@ In het onderzoek van \textcite{Shadija2017} staat te lezen dat microservices de 
 
 Ook in andere onderzoeken naar microservices wordt \emph{Kafka} gebruikt. Zoals in het onderzoek van \textcite{Khazaei2017}. Als we kijken naar de conclusie uit dit onderzoek, blijkt dat \emph{Kafka} in grote lijnen het best scoort. De andere technologieën die in dit onderzoek gebruikt werden zijn \emph{Spark} en \emph{Cassandra}.
 
-Het verschil van dit onderzoek met het onderzoek van \textcite{Shadija2017} en het onderzoek van \textcite{Khazaei2017} is dat dit onderzoek nagaat welke technologie het beste is wanneer er veel data is voor het bedrijf TVH specifiek. Het onderzoek van \textcite{Khazaei2017} sluit hier het dichtst bij aan maar is wat te uitgebreid.
+Het verschil van deze bachelorproef-onderzoek met het onderzoek van \textcite{Shadija2017} en het dat van \textcite{Khazaei2017} is dat dit onderzoek nagaat welke technologie het beste is voor het bedrijf TVH. Het besluit van dit onderzoek is dus niet noodzakelijk een algemeen besluit voor alle bedrijven die met microservices werken. Het onderzoek van \textcite{Khazaei2017} sluit hier het dichtst bij aan omdat het ook \emph{Kafka} en andere technologiën vergelijkt, maar het onderzoek legt meer de nadruk hoe flexibel een programmeerbaar, zelf-besturend IoT-platform is, gebruik makend van microservices. Het vergelijken van verschillende technologieën bij \textcite{Khazaei2017} is dus maar een klein onderdeel van het onderzoek en wordt bovendien in een andere architectuur toegepast zoals de titel meedeelt: `\emph{SAVI-IoT: A Self-Managing Containerized IoT Platform}`. De meerwaarde van deze vergelijking voor de conclusie is dus niet zo groot voor \textcite{Khazaei2017}.
 
 Ook \textcite{Nycander2015} en \textcite{Cherradi2017} behandelen microservices in hun onderzoek.
 
@@ -34,7 +37,11 @@ Ook \textcite{Nycander2015} en \textcite{Cherradi2017} behandelen microservices 
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}
 \label{sec:methodologie}
-Om te bepalen welke technologie het beste is bij het gebruiken van microservices, zal dit onderzoek de verschillende technologieën vergelijken. Er zal gekeken welke technologie het snelste data kan opvragen en verwerken. Ook zal het onderzoek mensen die met verschillende technologieën reeds gewerkt hebben vragen naar hun voorkeur. 
+Om te bepalen welke technologie het beste is bij het gebruiken van microservices, zal dit onderzoek de verschillende technologieën vergelijken. Eerst zal er een rondvraag gehouden worden over de bevindingen en de voor- en nadelen van \emph{Kafka} en \emph{RabbitMq}. Er wordt ook eens gepolst als mensen met nog andere technologieën reeds gewerkt hebben en wat daar de bevindingen zijn.
+
+Dan zal er onderzocht worden als er effectief nog alternatieven bestaan voor \emph{Kafka} en \emph{RabbitMq}.
+
+Als laatste zal op een virtuele machine de realiteit nagebootst worden. Dit wordt gedaan door elke technologie op deze virtuele machine te zetten en daarna te gaan meten wat de snelheden zijn bij het opvragen, verwerken, ... van voorbeelddata.
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwachte resultaten}

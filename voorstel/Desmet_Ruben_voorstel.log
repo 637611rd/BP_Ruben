@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.23)  9 DEC 2018 15:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.23)  16 DEC 2018 17:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -980,8 +980,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.66 \tableofcontents
-                      % Print the contents section
+l.66     \tableofcontents
+                          % Print the contents section
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1020,33 +1020,33 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 7.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 15.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 15.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 25.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 25.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 38.
+(babel)             in language  on input line 25.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 38.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 38.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 38.
+(babel)             in language  on input line 25.
  [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 38.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 38.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 47.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 47.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 53.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 53.
 )
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 86.
@@ -1055,7 +1055,7 @@ Package babel Info: Redefining dutch shorthand "~
 
 
 AED: lastpage setting LastPage
-<FBO-NL.jpg, id=63, 481.8pt x 328.8285pt>
+<FBO-NL.jpg, id=64, 481.8pt x 328.8285pt>
 File: FBO-NL.jpg Graphic file (type jpg)
 <use FBO-NL.jpg>
 Package pdftex.def Info: FBO-NL.jpg  used on input line 88.
@@ -1074,9 +1074,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 88.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 88.
-[2
-
- <./FBO-NL.jpg>]
+[2 <./FBO-NL.jpg>]
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 88.
 Package babel Info: Redefining dutch shorthand "~
@@ -1093,24 +1091,25 @@ Package logreq Info: Writing requests to 'Desmet_Ruben_voorstel.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18818 strings out of 492649
- 311329 string characters out of 6129622
- 867988 words of memory out of 5000000
- 22280 multiletter control sequences out of 15000+600000
- 60380 words of font info for 192 fonts, out of 8000000 for 9000
+ 18855 strings out of 492649
+ 311666 string characters out of 6129622
+ 870567 words of memory out of 5000000
+ 22282 multiletter control sequences out of 15000+600000
+ 63465 words of font info for 216 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 50i,15n,53p,848b,3825s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,15n,53p,1321b,3825s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2018/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2
 018/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2018/tex
 mf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2018/texmf-dis
-t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
-pe1/urw/times/utmri8a.pfb>
-Output written on Desmet_Ruben_voorstel.pdf (2 pages, 623666 bytes).
+t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
+pe1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/ti
+mes/utmri8a.pfb>
+Output written on Desmet_Ruben_voorstel.pdf (2 pages, 628575 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
+ 102 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
  13 named destinations out of 1000 (max. 500000)
  53302 words of extra memory for PDF output out of 61914 (max. 10000000)
 

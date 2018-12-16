@@ -2129,8 +2129,10 @@
     <bcf:citekey order="3">Shadija2017</bcf:citekey>
     <bcf:citekey order="4">Khazaei2017</bcf:citekey>
     <bcf:citekey order="5">Khazaei2017</bcf:citekey>
-    <bcf:citekey order="6">Nycander2015</bcf:citekey>
-    <bcf:citekey order="7">Cherradi2017</bcf:citekey>
+    <bcf:citekey order="6">Khazaei2017</bcf:citekey>
+    <bcf:citekey order="7">Khazaei2017</bcf:citekey>
+    <bcf:citekey order="8">Nycander2015</bcf:citekey>
+    <bcf:citekey order="9">Cherradi2017</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">
