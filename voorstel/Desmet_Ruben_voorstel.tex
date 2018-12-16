@@ -1,0 +1,88 @@
+%==============================================================================
+% Sjabloon onderzoeksvoorstel bachelorproef
+%==============================================================================
+% Gebaseerd op LaTeX-sjabloon ‘Stylish Article’ (zie voorstel.cls)
+% Auteur: Jens Buysse, Bert Van Vreckem
+
+\documentclass[fleqn,10pt]{voorstel}
+
+%------------------------------------------------------------------------------
+% Metadata over het voorstel
+%------------------------------------------------------------------------------
+
+\JournalInfo{HoGent Bedrijf en Organisatie}
+\Archive{Bachelorproef 2018 - 2019} % Of: Onderzoekstechnieken
+
+%---------- Titel & auteur ----------------------------------------------------
+
+% TODO: geef werktitel van je eigen voorstel op
+\PaperTitle{Welke technologie is het meest geschikt om in een IoT-applicatie data van microservices te verwerken?}
+\PaperType{Onderzoeksvoorstel Bachelorproef} % Type document
+
+% TODO: vul je eigen naam in als auteur, geef ook je emailadres mee!
+\Authors{Ruben Desmet\textsuperscript{1}} % Authors
+\CoPromotor{Nog niet bepaald\textsuperscript{2} (TVH)}
+\affiliation{\textbf{Contact:}
+  \textsuperscript{1} \href{mailto:ruben.desmet.y7611@student.hogent.be}{ruben.desmet.y7611@student.hogent.be};
+  \textsuperscript{2} \href{
+  }{};
+}
+
+%---------- Abstract ----------------------------------------------------------
+
+\Abstract{Het bedrijf TVH heeft veel hoogwerkers en andere soort werktuigen in bezit. Deze werktuigen zorgen voor een heel wat data. Ze maken gebruik van microservices om deze data te verwerken en door te geven naar de componenten die deze data nodig hebben. In deze Internet of Things-applicatie vraagt de component alleen de input op die hij nodig heeft. De technologie die hierbij gebruikt werd om deze data door te spelen was \emph{RabbitMq}. Nu zijn ze aan het overschakelen naar een andere technologie genaamd \emph{Kafka}. Deze bachelorproef zal technologieën vergelijken die gebruikt worden voor microservices. De bedoeling van dit onderzoek is dat het uitwijst welke technologie het meest geschikt is om te werken met microservices.
+    
+    
+}
+
+%---------- Onderzoeksdomein en sleutelwoorden --------------------------------
+% TODO: Sleutelwoorden:
+%
+% Het eerste sleutelwoord beschrijft het onderzoeksdomein. Je kan kiezen uit
+% deze lijst:
+%
+% - Mobiele applicatieontwikkeling
+% - Webapplicatieontwikkeling
+% - Applicatieontwikkeling (andere)
+% - Systeembeheer
+% - Netwerkbeheer
+% - Mainframe
+% - E-business
+% - Databanken en big data
+% - Machineleertechnieken en kunstmatige intelligentie
+% - Andere (specifieer)
+%
+% De andere sleutelwoorden zijn vrij te kiezen
+
+\Keywords{Microservices --- IoT-Applicatie --- Kafka --- RabbitMq} % Keywords
+\newcommand{\keywordname}{Sleutelwoorden} % Defines the keywords heading name
+
+%---------- Titel, inhoud -----------------------------------------------------
+
+\begin{document}
+
+\flushbottom % Makes all text pages the same height
+\maketitle % Print the title and abstract box
+\tableofcontents % Print the contents section
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%------------------------------------------------------------------------------
+% Hoofdtekst
+%------------------------------------------------------------------------------
+
+% De hoofdtekst van het voorstel zit in een apart bestand, zodat het makkelijk
+% kan opgenomen worden in de bijlagen van de bachelorproef zelf.
+\input{voorstel-inhoud}
+
+%------------------------------------------------------------------------------
+% Referentielijst
+%------------------------------------------------------------------------------
+% TODO: de gerefereerde werken moeten in BibTeX-bestand ``voorstel.bib''
+% voorkomen. Gebruik JabRef om je bibliografie bij te houden en vergeet niet
+% om compatibiliteit met Biber/BibLaTeX aan te zetten (File > Switch to
+% BibLaTeX mode)
+
+\phantomsection
+\printbibliography[heading=bibintoc]
+
+\end{document}

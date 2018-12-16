@@ -1,0 +1,188 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{Cherradi2017}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=8faba3e3a9df2b641d57790353d269c8}{%
+           family={Cherradi},
+           familyi={C\bibinitperiod},
+           given={Ghyzlane},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=13abc22a60c2b27933a796b4c4ee2a30}{%
+           family={El\bibnamedelima Bouziri},
+           familyi={E\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Adil},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=a993bf34c23059e5150f6e318fc57a22}{%
+           family={Boulmakoul},
+           familyi={B\bibinitperiod},
+           given={Azedine},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{09f5eac87cf03f86b02c9a9201a5c0d9}
+      \strng{fullhash}{ece7c66b81f596d6ad5132deca5efcd7}
+      \strng{bibnamehash}{ece7c66b81f596d6ad5132deca5efcd7}
+      \strng{authorbibnamehash}{ece7c66b81f596d6ad5132deca5efcd7}
+      \strng{authornamehash}{09f5eac87cf03f86b02c9a9201a5c0d9}
+      \strng{authorfullhash}{ece7c66b81f596d6ad5132deca5efcd7}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{month}{11}
+      \field{title}{A Generic microservice-based architecture for Smart HazMat Transportation Ecosystem}
+      \field{year}{2017}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Khazaei2017}{thesis}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=6399bf16a9af647f1989264cba981682}{%
+           family={Khazaei},
+           familyi={K\bibinitperiod},
+           given={Hamzeh},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=a8fa54e763628353e6bb59e1eaaacb02}{%
+           family={Bannazadeh},
+           familyi={B\bibinitperiod},
+           given={Hadi},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e8ae8d9fdf6679ee41364bed85175c64}{%
+           family={Leon-Garcia},
+           familyi={L\bibinithyphendelim G\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {University of Toronto, Ontario, Canada}%
+      }
+      \strng{namehash}{e275dcd5c19cb416684fedd7a01bb261}
+      \strng{fullhash}{da1f07417e808ce7bea304a47a15a69c}
+      \strng{bibnamehash}{da1f07417e808ce7bea304a47a15a69c}
+      \strng{authorbibnamehash}{da1f07417e808ce7bea304a47a15a69c}
+      \strng{authornamehash}{e275dcd5c19cb416684fedd7a01bb261}
+      \strng{authorfullhash}{da1f07417e808ce7bea304a47a15a69c}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{month}{8}
+      \field{title}{SAVI-IoT: A Self-Managing Containerized IoT Platform}
+      \field{type}{mathesis}
+      \field{year}{2017}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Nycander2015}{thesis}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=2208dc478b5466ae146f6012cd3e7cb6}{%
+           family={Nycander},
+           familyi={N\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{2}{%
+        {KTH Royal Institute of Technology, School of Computer Science}%
+        {Communication (CSC)}%
+      }
+      \strng{namehash}{2208dc478b5466ae146f6012cd3e7cb6}
+      \strng{fullhash}{2208dc478b5466ae146f6012cd3e7cb6}
+      \strng{bibnamehash}{2208dc478b5466ae146f6012cd3e7cb6}
+      \strng{authorbibnamehash}{2208dc478b5466ae146f6012cd3e7cb6}
+      \strng{authornamehash}{2208dc478b5466ae146f6012cd3e7cb6}
+      \strng{authorfullhash}{2208dc478b5466ae146f6012cd3e7cb6}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{month}{6}
+      \field{title}{Learning-Based Testing of Microservices}
+      \field{type}{mathesis}
+      \field{year}{2015}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Shadija2017}{thesis}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=a9d999710087a76eca41cf61f393f0e4}{%
+           family={Shadija},
+           familyi={S\bibinitperiod},
+           given={Dharmendra},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3828c3f82f0fa873ecf95acbd8cb03e6}{%
+           family={Rezai},
+           familyi={R\bibinitperiod},
+           given={Mo},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=29a51c34a6b90361751e8080aa8c3692}{%
+           family={Hill},
+           familyi={H\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{3}{%
+        {Department of Computing Sheffield Hallam University, UK}%
+        {School of Computing}%
+        {Engineering University of Huddersfield, UK}%
+      }
+      \strng{namehash}{ed74fefaf311443d695aa5fc9452894d}
+      \strng{fullhash}{dfb325d3a16dfa8f19a18af47bece141}
+      \strng{bibnamehash}{dfb325d3a16dfa8f19a18af47bece141}
+      \strng{authorbibnamehash}{dfb325d3a16dfa8f19a18af47bece141}
+      \strng{authornamehash}{ed74fefaf311443d695aa5fc9452894d}
+      \strng{authorfullhash}{dfb325d3a16dfa8f19a18af47bece141}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{7}
+      \field{month}{9}
+      \field{title}{Towards an Understanding of Microservices}
+      \field{type}{mathesis}
+      \field{year}{2017}
+      \field{dateera}{ce}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
