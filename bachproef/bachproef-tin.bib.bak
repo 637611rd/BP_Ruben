@@ -32,11 +32,4 @@
   author    = {Guidi, Claudio and Lanese, Ivan and Mazzara, Manuel and Montesi, Fabrizio},
 }
 
-@Electronic{Velthoven2016,
-  author = {Velthoven, Jan Kees},
-  month  = apr,
-  year   = {2016},
-  title  = {10 dingen die je moet weten over microservices},
-}
-
 @Comment{jabref-meta: databaseType:bibtex;}

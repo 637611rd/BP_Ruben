@@ -1,0 +1,352 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{Cherradi2017}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=8faba3e3a9df2b641d57790353d269c8}{%
+           family={Cherradi},
+           familyi={C\bibinitperiod},
+           given={Ghyzlane},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=13abc22a60c2b27933a796b4c4ee2a30}{%
+           family={El\bibnamedelima Bouziri},
+           familyi={E\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Adil},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=a993bf34c23059e5150f6e318fc57a22}{%
+           family={Boulmakoul},
+           familyi={B\bibinitperiod},
+           given={Azedine},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{09f5eac87cf03f86b02c9a9201a5c0d9}
+      \strng{fullhash}{ece7c66b81f596d6ad5132deca5efcd7}
+      \strng{bibnamehash}{ece7c66b81f596d6ad5132deca5efcd7}
+      \strng{authorbibnamehash}{ece7c66b81f596d6ad5132deca5efcd7}
+      \strng{authornamehash}{09f5eac87cf03f86b02c9a9201a5c0d9}
+      \strng{authorfullhash}{ece7c66b81f596d6ad5132deca5efcd7}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{month}{11}
+      \field{title}{A Generic microservice-based architecture for Smart HazMat Transportation Ecosystem}
+      \field{year}{2017}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Creeger2009}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=e888aba3556efbb8063540e3e2ae69b4}{%
+           family={Creeger},
+           familyi={C\bibinitperiod},
+           given={Mache},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e888aba3556efbb8063540e3e2ae69b4}
+      \strng{fullhash}{e888aba3556efbb8063540e3e2ae69b4}
+      \strng{bibnamehash}{e888aba3556efbb8063540e3e2ae69b4}
+      \strng{authorbibnamehash}{e888aba3556efbb8063540e3e2ae69b4}
+      \strng{authornamehash}{e888aba3556efbb8063540e3e2ae69b4}
+      \strng{authorfullhash}{e888aba3556efbb8063540e3e2ae69b4}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Communications of the ACM}
+      \field{number}{8}
+      \field{title}{{CTO Roundtable: Cloud Computing}}
+      \field{volume}{52}
+      \field{year}{2009}
+      \field{pages}{50\bibrangedash 56}
+      \range{pages}{7}
+    \endentry
+    \entry{Claudio2017}{book}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=140e3ce356872f7cce449eab6adca6f3}{%
+           family={Guidi},
+           familyi={G\bibinitperiod},
+           given={Claudio},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=bbb49644b74d8274fe1ac9f0986369bf}{%
+           family={Lanese},
+           familyi={L\bibinitperiod},
+           given={Ivan},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=147f187ab39b8aa10377370e35dd100c}{%
+           family={Mazzara},
+           familyi={M\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=94aec34b0ab3aab8d0b52c5b042d902c}{%
+           family={Montesi},
+           familyi={M\bibinitperiod},
+           given={Fabrizio},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{0a3c33d75499a24109fd446d70b040b8}
+      \strng{fullhash}{af03f383c875cf5bd70d95b6ce7e0bed}
+      \strng{bibnamehash}{af03f383c875cf5bd70d95b6ce7e0bed}
+      \strng{authorbibnamehash}{af03f383c875cf5bd70d95b6ce7e0bed}
+      \strng{authornamehash}{0a3c33d75499a24109fd446d70b040b8}
+      \strng{authorfullhash}{af03f383c875cf5bd70d95b6ce7e0bed}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Microservices: A Language-Based Approach}
+      \field{year}{2017}
+    \endentry
+    \entry{Khazaei2017}{thesis}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=6399bf16a9af647f1989264cba981682}{%
+           family={Khazaei},
+           familyi={K\bibinitperiod},
+           given={Hamzeh},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=a8fa54e763628353e6bb59e1eaaacb02}{%
+           family={Bannazadeh},
+           familyi={B\bibinitperiod},
+           given={Hadi},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e8ae8d9fdf6679ee41364bed85175c64}{%
+           family={Leon-Garcia},
+           familyi={L\bibinithyphendelim G\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {University of Toronto, Ontario, Canada}%
+      }
+      \strng{namehash}{e275dcd5c19cb416684fedd7a01bb261}
+      \strng{fullhash}{da1f07417e808ce7bea304a47a15a69c}
+      \strng{bibnamehash}{da1f07417e808ce7bea304a47a15a69c}
+      \strng{authorbibnamehash}{da1f07417e808ce7bea304a47a15a69c}
+      \strng{authornamehash}{e275dcd5c19cb416684fedd7a01bb261}
+      \strng{authorfullhash}{da1f07417e808ce7bea304a47a15a69c}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{month}{8}
+      \field{title}{SAVI-IoT: A Self-Managing Containerized IoT Platform}
+      \field{type}{mathesis}
+      \field{year}{2017}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Knuth1998}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=fcbea740aeb72b8e941e0d4aa9f6a9c6}{%
+           family={Knuth},
+           familyi={K\bibinitperiod},
+           given={Donald\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Redwood City, CA, USA}%
+      }
+      \list{publisher}{1}{%
+        {Addison Wesley Longman Publishing Co., Inc.}%
+      }
+      \strng{namehash}{fcbea740aeb72b8e941e0d4aa9f6a9c6}
+      \strng{fullhash}{fcbea740aeb72b8e941e0d4aa9f6a9c6}
+      \strng{bibnamehash}{fcbea740aeb72b8e941e0d4aa9f6a9c6}
+      \strng{authorbibnamehash}{fcbea740aeb72b8e941e0d4aa9f6a9c6}
+      \strng{authornamehash}{fcbea740aeb72b8e941e0d4aa9f6a9c6}
+      \strng{authorfullhash}{fcbea740aeb72b8e941e0d4aa9f6a9c6}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The art of computer programming, volume 3: (2nd ed.) sorting and searching}
+      \field{year}{1998}
+    \endentry
+    \entry{Nycander2015}{thesis}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=2208dc478b5466ae146f6012cd3e7cb6}{%
+           family={Nycander},
+           familyi={N\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{2}{%
+        {KTH Royal Institute of Technology, School of Computer Science}%
+        {Communication (CSC)}%
+      }
+      \strng{namehash}{2208dc478b5466ae146f6012cd3e7cb6}
+      \strng{fullhash}{2208dc478b5466ae146f6012cd3e7cb6}
+      \strng{bibnamehash}{2208dc478b5466ae146f6012cd3e7cb6}
+      \strng{authorbibnamehash}{2208dc478b5466ae146f6012cd3e7cb6}
+      \strng{authornamehash}{2208dc478b5466ae146f6012cd3e7cb6}
+      \strng{authorfullhash}{2208dc478b5466ae146f6012cd3e7cb6}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{month}{6}
+      \field{title}{Learning-Based Testing of Microservices}
+      \field{type}{mathesis}
+      \field{year}{2015}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Pollefliet2011}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=7ca343ebcc6de1727ac22a1a847c21e5}{%
+           family={Pollefliet},
+           familyi={P\bibinitperiod},
+           given={Leen},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Gent}%
+      }
+      \list{publisher}{1}{%
+        {Academia Press}%
+      }
+      \strng{namehash}{7ca343ebcc6de1727ac22a1a847c21e5}
+      \strng{fullhash}{7ca343ebcc6de1727ac22a1a847c21e5}
+      \strng{bibnamehash}{7ca343ebcc6de1727ac22a1a847c21e5}
+      \strng{authorbibnamehash}{7ca343ebcc6de1727ac22a1a847c21e5}
+      \strng{authornamehash}{7ca343ebcc6de1727ac22a1a847c21e5}
+      \strng{authorfullhash}{7ca343ebcc6de1727ac22a1a847c21e5}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Schrijven van verslag tot eindwerk: do's en don'ts}
+      \field{year}{2011}
+    \endentry
+    \entry{Shadija2017}{thesis}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=a9d999710087a76eca41cf61f393f0e4}{%
+           family={Shadija},
+           familyi={S\bibinitperiod},
+           given={Dharmendra},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3828c3f82f0fa873ecf95acbd8cb03e6}{%
+           family={Rezai},
+           familyi={R\bibinitperiod},
+           given={Mo},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=29a51c34a6b90361751e8080aa8c3692}{%
+           family={Hill},
+           familyi={H\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{3}{%
+        {Department of Computing Sheffield Hallam University, UK}%
+        {School of Computing}%
+        {Engineering University of Huddersfield, UK}%
+      }
+      \strng{namehash}{ed74fefaf311443d695aa5fc9452894d}
+      \strng{fullhash}{dfb325d3a16dfa8f19a18af47bece141}
+      \strng{bibnamehash}{dfb325d3a16dfa8f19a18af47bece141}
+      \strng{authorbibnamehash}{dfb325d3a16dfa8f19a18af47bece141}
+      \strng{authornamehash}{ed74fefaf311443d695aa5fc9452894d}
+      \strng{authorfullhash}{dfb325d3a16dfa8f19a18af47bece141}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{7}
+      \field{month}{9}
+      \field{title}{Towards an Understanding of Microservices}
+      \field{type}{mathesis}
+      \field{year}{2017}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Velthoven2016}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=47eac567e493c771e34315b795b79e5e}{%
+           family={Velthoven},
+           familyi={V\bibinitperiod},
+           given={Jan\bibnamedelima Kees},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{47eac567e493c771e34315b795b79e5e}
+      \strng{fullhash}{47eac567e493c771e34315b795b79e5e}
+      \strng{bibnamehash}{47eac567e493c771e34315b795b79e5e}
+      \strng{authorbibnamehash}{47eac567e493c771e34315b795b79e5e}
+      \strng{authornamehash}{47eac567e493c771e34315b795b79e5e}
+      \strng{authorfullhash}{47eac567e493c771e34315b795b79e5e}
+      \field{sortinit}{V}
+      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{10 dingen die je moet weten over microservices}
+      \field{year}{2016}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
