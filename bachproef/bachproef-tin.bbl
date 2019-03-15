@@ -59,36 +59,6 @@
       \field{year}{2017}
       \field{dateera}{ce}
     \endentry
-    \entry{Creeger2009}{article}{}
-      \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=e888aba3556efbb8063540e3e2ae69b4}{%
-           family={Creeger},
-           familyi={C\bibinitperiod},
-           given={Mache},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{e888aba3556efbb8063540e3e2ae69b4}
-      \strng{fullhash}{e888aba3556efbb8063540e3e2ae69b4}
-      \strng{bibnamehash}{e888aba3556efbb8063540e3e2ae69b4}
-      \strng{authorbibnamehash}{e888aba3556efbb8063540e3e2ae69b4}
-      \strng{authornamehash}{e888aba3556efbb8063540e3e2ae69b4}
-      \strng{authorfullhash}{e888aba3556efbb8063540e3e2ae69b4}
-      \field{sortinit}{C}
-      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Communications of the ACM}
-      \field{number}{8}
-      \field{title}{{CTO Roundtable: Cloud Computing}}
-      \field{volume}{52}
-      \field{year}{2009}
-      \field{pages}{50\bibrangedash 56}
-      \range{pages}{7}
-    \endentry
     \entry{Claudio2017}{book}{}
       \name{author}{4}{}{%
         {{uniquename=0,uniquepart=base,hash=140e3ce356872f7cce449eab6adca6f3}{%
@@ -135,6 +105,34 @@
       \field{title}{Microservices: A Language-Based Approach}
       \field{year}{2017}
     \endentry
+    \entry{Johansson2016}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=146240e8e69f8d303c8af39e1f985cbd}{%
+           family={Johansson},
+           familyi={J\bibinitperiod},
+           given={Lovisa},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {https://www.cloudkarafka.com/blog/2016-11-30-part1-kafka-for-beginners-what-is-apache-kafka.html}%
+      }
+      \strng{namehash}{146240e8e69f8d303c8af39e1f985cbd}
+      \strng{fullhash}{146240e8e69f8d303c8af39e1f985cbd}
+      \strng{bibnamehash}{146240e8e69f8d303c8af39e1f985cbd}
+      \strng{authorbibnamehash}{146240e8e69f8d303c8af39e1f985cbd}
+      \strng{authornamehash}{146240e8e69f8d303c8af39e1f985cbd}
+      \strng{authorfullhash}{146240e8e69f8d303c8af39e1f985cbd}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Part 1: Apache Kafka for beginners - What is Apache Kafka?}
+      \field{year}{2016}
+    \endentry
     \entry{Khazaei2017}{thesis}{}
       \name{author}{3}{}{%
         {{uniquename=0,uniquepart=base,hash=6399bf16a9af647f1989264cba981682}{%
@@ -178,37 +176,6 @@
       \field{type}{mathesis}
       \field{year}{2017}
       \field{dateera}{ce}
-    \endentry
-    \entry{Knuth1998}{book}{}
-      \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=fcbea740aeb72b8e941e0d4aa9f6a9c6}{%
-           family={Knuth},
-           familyi={K\bibinitperiod},
-           given={Donald\bibnamedelima E.},
-           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {Redwood City, CA, USA}%
-      }
-      \list{publisher}{1}{%
-        {Addison Wesley Longman Publishing Co., Inc.}%
-      }
-      \strng{namehash}{fcbea740aeb72b8e941e0d4aa9f6a9c6}
-      \strng{fullhash}{fcbea740aeb72b8e941e0d4aa9f6a9c6}
-      \strng{bibnamehash}{fcbea740aeb72b8e941e0d4aa9f6a9c6}
-      \strng{authorbibnamehash}{fcbea740aeb72b8e941e0d4aa9f6a9c6}
-      \strng{authornamehash}{fcbea740aeb72b8e941e0d4aa9f6a9c6}
-      \strng{authorfullhash}{fcbea740aeb72b8e941e0d4aa9f6a9c6}
-      \field{sortinit}{K}
-      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{The art of computer programming, volume 3: (2nd ed.) sorting and searching}
-      \field{year}{1998}
     \endentry
     \entry{Nycander2015}{thesis}{}
       \name{author}{1}{}{%
@@ -319,6 +286,35 @@
       \field{type}{mathesis}
       \field{year}{2017}
       \field{dateera}{ce}
+    \endentry
+    \entry{Sookocheff2015}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=ccb806c712ee6a90b6349e7136891a89}{%
+           family={Sookocheff},
+           familyi={S\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {https://sookocheff.com/post/kafka/kafka-in-a-nutshell/}%
+      }
+      \strng{namehash}{ccb806c712ee6a90b6349e7136891a89}
+      \strng{fullhash}{ccb806c712ee6a90b6349e7136891a89}
+      \strng{bibnamehash}{ccb806c712ee6a90b6349e7136891a89}
+      \strng{authorbibnamehash}{ccb806c712ee6a90b6349e7136891a89}
+      \strng{authornamehash}{ccb806c712ee6a90b6349e7136891a89}
+      \strng{authorfullhash}{ccb806c712ee6a90b6349e7136891a89}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{title}{Kafka in a Nutshell}
+      \field{year}{2015}
     \endentry
     \entry{Velthoven2016}{online}{}
       \name{author}{1}{}{%

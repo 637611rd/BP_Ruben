@@ -15,6 +15,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Microservices}{15}{section.2.1}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Kafka}{17}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}RabbitMq}{19}{section.2.3}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Methodologie}{21}{chapter.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Conclusie}{23}{chapter.4}

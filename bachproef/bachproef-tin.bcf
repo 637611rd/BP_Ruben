@@ -2128,18 +2128,17 @@
     <bcf:citekey order="1">Pollefliet2011</bcf:citekey>
     <bcf:citekey order="2">Claudio2017</bcf:citekey>
     <bcf:citekey order="3">Velthoven2016</bcf:citekey>
-    <bcf:citekey order="4">Pollefliet2011</bcf:citekey>
-    <bcf:citekey order="5">Knuth1998</bcf:citekey>
-    <bcf:citekey order="6">Creeger2009</bcf:citekey>
-    <bcf:citekey order="7">Shadija2017</bcf:citekey>
-    <bcf:citekey order="8">Khazaei2017</bcf:citekey>
-    <bcf:citekey order="9">Shadija2017</bcf:citekey>
+    <bcf:citekey order="4">Sookocheff2015</bcf:citekey>
+    <bcf:citekey order="5">Johansson2016</bcf:citekey>
+    <bcf:citekey order="6">Shadija2017</bcf:citekey>
+    <bcf:citekey order="7">Khazaei2017</bcf:citekey>
+    <bcf:citekey order="8">Shadija2017</bcf:citekey>
+    <bcf:citekey order="9">Khazaei2017</bcf:citekey>
     <bcf:citekey order="10">Khazaei2017</bcf:citekey>
     <bcf:citekey order="11">Khazaei2017</bcf:citekey>
     <bcf:citekey order="12">Khazaei2017</bcf:citekey>
-    <bcf:citekey order="13">Khazaei2017</bcf:citekey>
-    <bcf:citekey order="14">Nycander2015</bcf:citekey>
-    <bcf:citekey order="15">Cherradi2017</bcf:citekey>
+    <bcf:citekey order="13">Nycander2015</bcf:citekey>
+    <bcf:citekey order="14">Cherradi2017</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">

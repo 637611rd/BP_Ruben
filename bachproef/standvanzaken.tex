@@ -35,13 +35,45 @@ De vier grootste voordelen van microservices zijn:
 
  \autocite{Claudio2017} en \autocite{Velthoven2016}
 
+\section{Kafka}
+
+Wanneer je als bedrijf veel berichten binnen krijgt op een korte tijdsspanne, dan heb je natuurlijk een goed functionerende technologie nodig die al deze berichten kan verwerken. \emph{Kafka} is een voorbeeld van zo een technologie. Het is dus een berichtensysteem waarbij schaalbaarheid en redundantie een grote troef zijn. Bepaalde kernwoorden zijn belangrijk om de architectuur van \emph{Kafka} te begrijpen. Deze kernwoorden zijn: topics, producers, consumers en brokers.  
+
+Topics zijn, zoals de naam al doet vermoeden, verschillende onderwerpen. Alle berichten zijn gegroepeerd in een van deze topics. Het formaat van een bericht kan verschillend zijn. Het type kan een gewone tekst zijn, kan van een Json-formaat zijn, of kan iets helemaal anders zijn. Het is mogelijk om zowel naar een specifieke topic een bericht te verzenden als te ontvangen. Dit brengt ons naadloos bij de volgende twee begrippen: producers en consumers. Als een producer kun je een bericht verzenden naar uw gewenste topic. Een consumer kan dan zelf bepalen van welke topic hij berichten wilt ontvangen. Het laatste woord dat nog moet verduidelijkt worden is een broker. \emph{Kafka} draait op een cluster. Iedere cluster bestaat uit één of meerdere nodes(servers). Zo een server noemen we een Kafka broker. Per Kafka cluster kunnen er verschillende producers en consumers zijn, zoals te zien is op figuur 2.2. 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=80mm]{../kafkaCluster.png}
+    \caption{Voorbeeld van een Kafka cluster}
+    
+\end{figure}
+
+ Een topic kan je verdelen in verschillende partities. Dit wil zeggen dat je uw data kunt verdelen in ongeveer gelijke groepen (brokers). Iedere partitie kan dan staan voor een specifieke groep data binnen een topic zodat je niet alle berichten altijd moet overlopen. Dit principe van verschillende partities worden ook gebruikt bij traditionele databanken. Ook consumers kun je verdelen in verschillende partities, die samen één consumer-groep vormen. Door topics en consumers op deze manier op te delen, zorg je ervoor dat het mogelijk is dat meerdere consumers kunnen lezen van meerere partities in een topic. Dit heeft als positief gevolg dat je meer berichten kunt verwerken binnen een bepaalde tijd. 
+ 
+ Ieder bericht binnen een partitie heeft een offset. Dit is een identifier, waardoor het mogelijk is om de berichten te ordenen. Normaal gezien als je als consumer je een subscriptie maakt op een topic, dan krijg je vanaf dit moment alle nieuwe berichten die binnen komen op de partitie waarop je een subscriptie hebt. Door een offset is het mogelijk om iets oudere berichten die op een partitie staan dan het moment dat je een subscriptie aangemaakt hebt, ook op te vragen. Op figuur 2.3 zie je een simpele voorstelling van een producer die berichten op een partitie van een topic plaatst. De cijfertjes stellen de offset voor van een bericht.
+ \begin{figure}[h!]
+     \centering
+     \includegraphics[width=80mm]{../kafkaOffset.png}
+     \caption{Simpele voorstelling van de werking van een offset}
+     
+ \end{figure}
+
+Het is al even vermeld, maar wat is nu eigenlijk een consumer-groep? Dit is een verzameling van verschillende consumers. Iedere consumer op zich leest van één specifieke partitie waardoor je het aantal berichten binnen één tijdseenheid kunt verhogen. Alle consumers binnen één groep lezen samen alle berichten die op een topic staan. Het opdelen van je topic in verschillende partities zorgt er dus niet voor dat je een deel van je data verliest. Mochten er meer consumers zijn dan dat er partities zijn, dan zitten er sommigen zonder werk. Omgekeerd, als er meer partities zijn dan consumers, dan krijgen consumers van verschillende partities berichten binnen.  Figuur 2.4 is een voorbeeld hoe een topic in verschillende servers kan opgedeeld worden en hoe consumers in consumer-groepen kunnen onderverdeeld worden. Je ziet dat de Kafka cluster in twee servers onderverdeelt is. Iedere server heeft twee partities. Er zijn 2 consumer-groepen, groep A bestaat uit twee consumers, groep B bestaat uit 4 consumers. Iedere partitie kan dus naar verschillende consumer-groepen berichten versturen, maar kan niet binnen dezelfde consumer-groep naar een andere consumer iets verzenden. 
+
+ \begin{figure}[h!]
+    \centering
+    \includegraphics[width=80mm]{../kafkaConsumers.png}
+    \caption{Wisselwerking tussen partities en consumer-groepen}
+    
+\end{figure}
+
+\autocite{Sookocheff2015} en \autocite{Johansson2016}
+
+\section{RabbitMq}
+
+Een alternatief voor \emph{Kafka} is \emph{RabbitMq}. Dit is software waar men berichten kan plaatsen en ophalen op één of meerdere 'queues'. Ook hier heb je verschillende mogelijkheden van wat het formaat is van de berichten. Het kan zowel een gewone tekst zijn, als een Json-file. 
+
+Wanneer een bericht van een queue wordt gelezen, dan wordt deze verwijderd van de queue. Het is dus niet mogelijk om later opnieuw hetzelfde bericht op te gaan vragen. De volledige queue kan ook een broker genoemd worden. Er zijn hier ook producers die data op de queue zetten, alsook consumers die een subscriptie kunnen maken op een queue. 
 
 
-Dit hoofdstuk bevat je literatuurstudie. De inhoud gaat verder op de inleiding, maar zal het onderwerp van de bachelorproef *diepgaand* uitspitten. De bedoeling is dat de lezer na lezing van dit hoofdstuk helemaal op de hoogte is van de huidige stand van zaken (state-of-the-art) in het onderzoeksdomein. Iemand die niet vertrouwd is met het onderwerp, weet er nu voldoende om de rest van het verhaal te kunnen volgen, zonder dat die er nog andere informatie moet over opzoeken \autocite{Pollefliet2011}.
 
-Je verwijst bij elke bewering die je doet, vakterm die je introduceert, enz. naar je bronnen. In \LaTeX{} kan dat met het commando \texttt{$\backslash${textcite\{\}}} of \texttt{$\backslash${autocite\{\}}}. Als argument van het commando geef je de ``sleutel'' van een ``record'' in een bibliografische databank in het Bib\TeX{}-formaat (een tekstbestand). Als je expliciet naar de auteur verwijst in de zin, gebruik je \texttt{$\backslash${}textcite\{\}}.
-Soms wil je de auteur niet expliciet vernoemen, dan gebruik je \texttt{$\backslash${}autocite\{\}}. In de volgende paragraaf een voorbeeld van elk.
-
-\textcite{Knuth1998} schreef een van de standaardwerken over sorteer- en zoekalgoritmen. Experten zijn het erover eens dat cloud computing een interessante opportuniteit vormen, zowel voor gebruikers als voor dienstverleners op vlak van informatietechnologie~\autocite{Creeger2009}.
-
-\lipsum[7-20]
