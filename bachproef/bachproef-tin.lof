@@ -13,6 +13,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Wisselwerking tussen partities en consumer-groepen}}{18}{figure.2.4}
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Werking drie verschillende exchanges bij \emph {RabbitMq}}}{19}{figure.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Populariteit \emph {Kafka} en \emph {RabbitMq} in het afgelopen jaar}}{20}{figure.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Populariteit \emph {Kafka} en \emph {RabbitMq} in de afgelopen vijf jaar.}}{20}{figure.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.8}{\ignorespaces De flow die een message aflegt bij \emph {Google Pub/Sub}.}}{21}{figure.2.8}
+\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

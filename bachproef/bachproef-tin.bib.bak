@@ -54,4 +54,12 @@
   address = {https://www.cloudkarafka.com/blog/2016-11-30-part1-kafka-for-beginners-what-is-apache-kafka.html},
 }
 
+@Electronic{Johansson2015,
+  author  = {Johansson, Lovisa},
+  month   = may,
+  year    = {2015},
+  title   = {Part 1: RabbitMQ for beginners - What is RabbitMQ?},
+  address = {https://www.cloudamqp.com/blog/2015-05-18-part1-rabbitmq-for-beginners-what-is-rabbitmq.html},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

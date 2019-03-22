@@ -59,6 +59,31 @@
       \field{year}{2017}
       \field{dateera}{ce}
     \endentry
+    \entry{Google2019}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {https://cloud.google.com/pubsub/docs/overview}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What Is Cloud Pub/Sub?}
+      \field{year}{2019}
+    \endentry
     \entry{Claudio2017}{book}{}
       \name{author}{4}{}{%
         {{uniquename=0,uniquepart=base,hash=140e3ce356872f7cce449eab6adca6f3}{%
@@ -105,6 +130,34 @@
       \field{title}{Microservices: A Language-Based Approach}
       \field{year}{2017}
     \endentry
+    \entry{Johansson2015}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=146240e8e69f8d303c8af39e1f985cbd}{%
+           family={Johansson},
+           familyi={J\bibinitperiod},
+           given={Lovisa},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {https://www.cloudamqp.com/blog/2015-05-18-part1-rabbitmq-for-beginners-what-is-rabbitmq.html}%
+      }
+      \strng{namehash}{146240e8e69f8d303c8af39e1f985cbd}
+      \strng{fullhash}{146240e8e69f8d303c8af39e1f985cbd}
+      \strng{bibnamehash}{146240e8e69f8d303c8af39e1f985cbd}
+      \strng{authorbibnamehash}{146240e8e69f8d303c8af39e1f985cbd}
+      \strng{authornamehash}{146240e8e69f8d303c8af39e1f985cbd}
+      \strng{authorfullhash}{146240e8e69f8d303c8af39e1f985cbd}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{5}
+      \field{title}{Part 1: RabbitMQ for beginners - What is RabbitMQ?}
+      \field{year}{2015}
+    \endentry
     \entry{Johansson2016}{online}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=146240e8e69f8d303c8af39e1f985cbd}{%
@@ -127,7 +180,6 @@
       \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
-      \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Part 1: Apache Kafka for beginners - What is Apache Kafka?}

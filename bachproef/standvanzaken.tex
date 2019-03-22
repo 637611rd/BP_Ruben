@@ -75,5 +75,68 @@ Een alternatief voor \emph{Kafka} is \emph{RabbitMq}. Dit is software waar men b
 
 Wanneer een bericht van een queue wordt gelezen, dan wordt deze verwijderd van de queue. Het is dus niet mogelijk om later opnieuw hetzelfde bericht op te gaan vragen. De volledige queue kan ook een broker genoemd worden. Er zijn hier ook producers die data op de queue zetten, alsook consumers die een subscriptie kunnen maken op een queue. 
 
+\emph{RabbitMq} kan een voordeel zijn om te gebruiken in verschillende situaties. Als je bijvoorbeeld als gebruiker de data die je opslaat in een queue wilt distribueren naar verschillende consumers, dan is ook \emph{RabbitMq} een ideale technologie om dit te doen. Het is dus mogelijk de berichten te versturen naar verschillende consumers. Een ander voordeel is dat het mogelijk is om je berichten te verdelen over verschillende consumers. Op deze manier wordt dan de hoeveelheid mooi gebalanceerd verdeeld over de verschillende consumers.
+
+Er werd hier reeds vermeld dat een queue ook een broker genoemd kan worden. Maar eigenlijk is een broker bij \emph{RabbitMq} iets meer dan dat. Bij een broker kan je ook de exchange mee rekenen. Deze is verantwoordelijk voor het verzenden van de berichten naar de verschillende queues. Indien een bericht in de broker toekomt, moet deze dus eerst langs de exchange voordat hij in een queue terecht kan. De link tussen de queue en de exchange wordt ook wel eens een binding genoemd.
+
+Er zijn vier verschillende soorten van exchanges. Dit zijn: direct, fanout, topic en headers exchanges. Drie van deze worden uitgebeeld in figuur 2.5 \begin{itemize}
+    \item De direct exchanges sturen berichten naar een queue op basis van een routing key. Deze key is hetzelfde als de binding key van de queue waarnaar het naartoe moet verzenden. 
+    \item Fanout exchanges sturen berichten naar alle queues die verbonden zijn met de exchange
+    \item Bij Topic exchanges worden wildcard matches gebruikt . De match wordt gedaan tussen de routing key en de routing pattern die in de binding gespecificeerd wordt.
+    \item Header exchanges gebruiken de attributen uit de header om te bepalen welke queue de bestemming is van een bericht.
+\end{itemize}
+ \begin{figure}[h!]
+    \centering
+    \includegraphics[width=60mm]{../rabbitmqExchanges.png}
+    \caption{Werking drie verschillende exchanges bij \emph{RabbitMq}}
+    
+\end{figure}
+\autocite{Johansson2015}
+\section{Kafka vs RabbitMq}
+Als we kijken naar Google Trends om te bepalen welke van deze twee technologiën nu het populairste is, dan krijgen we in figuur 2.6 een grafiek te zien van het afgelopen jaar.
+ \begin{figure}[h!]
+    \centering
+    \includegraphics[width=100mm]{../KvsRMQ1.png}
+    \caption{Populariteit \emph{Kafka} en \emph{RabbitMq} in het afgelopen jaar}
+    
+\end{figure}
+
+In deze grafiek is duidelijk te zien dat \emph{Kafka} iets populairder is dan \emph{RabbitMq}. Er zit tussen juli en november wel een piek in waarbij \emph{RabbitMq} veel populairder is, maar over het algemeen gezien kunnen we concluderen dat in het afgelopen jaar \emph{Kafka} toch iet wat populairder is.
+
+ \begin{figure}[h!]
+    \centering
+    \includegraphics[width=100mm]{../KvsRMQ2.png}
+    \caption{Populariteit \emph{Kafka} en \emph{RabbitMq} in de afgelopen vijf jaar.}
+    
+\end{figure}
+
+Als je figuur 2.7 bekijkt, dan zie je een algemene trend. Namelijk dat vijf jaar geleden \emph{RabbitMq} veel populairder was, maar dat deze trend systematisch omgedraaid is. Uit deze figuur valt ook af te leiden dat in het algemeen de interesse naar technologieën voor microservices lichtjes toegenomen is in de laatste vijf jaar.
+
+\section{Google Pub/Sub}
+Tijdens het schooljaar dat dit onderzoek is uitgevoerd, is ondertussen ook het bedrijf waarvoor dit onderzocht wordt wat veranderd. Er is momenteel een nieuwe technologie die ook gebruikt wordt, namelijk \emph{Google Pub/Sub}. Zoals de naam doet vermoeden is Google eigenaar van deze technologie. 
+
+Ook hier zijn het ongeveer dezelfde kernwoorden die belangrijk zijn:
+\begin{itemize}
+    \item Topic
+    \item Subscription
+    \item Message
+    \item Publisher
+    \item Subscriber
+\end{itemize}
+
+De termen topic en message zijn hetzelfde als bij de andere technologieën, dus deze hoeven niet nog een keer uitgelegd te worden. Subscription is de link tussen de subscriber (deze wordt straks uitgelegd), en de topic. Dit is dus een soort van abonnement die een subscriber aangaat met een topic. Een subscriber is iemand of iets die de verschillende messages van een specifieke topic leest. Een publisher is dan degene die nieuwe messages op een topic plaatst.
+
+ \begin{figure}[h!]
+    \centering
+    \includegraphics[width=100mm]{../gpsFlow.png}
+    \caption{De flow die een message aflegt bij \emph{Google Pub/Sub}.}
+    
+\end{figure}
+
+Op figuur 2.8 is te zien hoe een message tot bij een subscriber geraakt, iemand of iets die de message leest. Eerste stap is de publisher die een message plaatst (published) naar een topic. Een message bevat een payload, dit is de inhoud van de message. Ook kan er eventueel attributen toegevoegd worden die iets meer vertellen over de inhoud van de payload. Dan in de tweede stap wordt de message opgeslagen in de Message Storage totdat een subscriber de message leest en acknowledged. Hierna zet de Pub/Sub deze message klaar in al zijn subscriptions. Deze message wordt dan gelezen als bijvoorbeeld de subscriber deze message binnen trekt. In de vierde stap zien we dat alle berichten die nog niet gelezen zijn door de subscriber, bij de subscriber binnen komen. Als een message goed is aangekomen, dan wordt er een acknowledge gestuurd naar de subscription. Dan wordt deze message ook verwijdert en kan deze niet meer opnieuw gelezen worden. Dit is de vijfde stap.
+
+\autocite{Google2019}
+
+
 
 
