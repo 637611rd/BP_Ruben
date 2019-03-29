@@ -5,12 +5,12 @@
 % bijzonder aan wat de link is met het vorige en volgende hoofdstuk.
 
 % Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
-Niet alles wat in dit onderzoek al is aangekaart, is gemakkelijk te begrijpen. Want natuurlijk zijn de begrippen zoals \emph{Kafka} en \emph{RabbitMq} niet voor iedereen even duidelijk. Ook de term microservices zal bij sommigen de wenkbrauwen wel eens doen fronsen. In dit hoofdstuk is het de bedoeling uit te leggen wat al deze begrippen betekenen. Elke tussentitel zal op zijn beurt uitleggen wat een begrip nu eigenlijk is. Na dit hoofdstuk zul je in staat zijn om met deze informatie te begrijpen wat er allemaal gebeurt in dit onderzoek.
+Niet alles wat in dit onderzoek al is aangekaart, is gemakkelijk te begrijpen. Want natuurlijk zijn de begrippen zoals \emph{Kafka} en \emph{RabbitMq} niet voor iedereen even duidelijk. Ook de term microservices zal bij sommigen de wenkbrauwen wel eens doen fronsen. In dit hoofdstuk is het de bedoeling uit te leggen wat al deze begrippen betekenen. Na dit hoofdstuk zul je in staat zijn om met deze informatie te begrijpen wat er allemaal gebeurt in dit onderzoek.
 \section{Microservices}
 
 Microservices is een software architectuur. De applicatie bestaat uit meerdere kleinere componenten die samen één groot geheel vormen. Deze kleinere componenten zijn onafhankelijk van elkaar en hebben elk hun eigen proces. Deze software architectuur is vrij recent en is de laatste jaren een echte hype aan het worden.
 
-Een belangrijke vraag is: waarom zijn microservices ontstaan? Server-side applicaties gebruiken meestel object-georiënteerde programmeertalen. Deze programmeertalen hebben abstracties om de complexiteit van hun programma's te behandelen in modules. Dit wordt ook wel eens `the monolith` genoemd. Dit is één groot geheel die meestal uit drie lagen bestaat. De presentatielaag, de businesslaag en de datalaag. Deze lagen kunnen niet apart van elkaar gebruikt worden omdat ze verschillende resources met elkaar delen. Dit zorgt ervoor dat bij iedere wijziging in de applicatie, alle lagen opnieuw gereleased worden in een nieuwere versie. Je kan natuurlijk al raden dat dit in een grote applicatie niet de beste oplossing is. 
+Een belangrijke vraag is: waarom zijn microservices ontstaan? Server-side applicaties gebruiken meestel object-georiënteerde programmeertalen. Deze programmeer talen hebben abstracties om de complexiteit van hun programma's te behandelen in modules. Dit wordt ook wel eens `the monolith` genoemd. Dit is één groot geheel dat meestal uit drie lagen bestaat. De presentatielaag, de businesslaag en de datalaag. Deze lagen kunnen niet apart van elkaar gebruikt worden omdat ze verschillende resources met elkaar delen. Dit zorgt ervoor dat bij iedere wijziging in de applicatie, alle lagen opnieuw gereleased worden in een nieuwere versie. Je kan natuurlijk al raden dat dit in een grote applicatie niet de beste oplossing is. 
 
 \begin{figure}[h!]
     \centering
@@ -31,7 +31,7 @@ De vier grootste voordelen van microservices zijn:
     \item Autonomie van ontwikkelteams.
 \end{itemize}
 
-
+\emph{Kafka}, \emph{RabbitMq} en \emph{Google Pub/Sub} zijn technologieën die gebruikt kunnen worden om microservices te verwerken. Hieronder verklaren we hoe deze verschillende technologieën werken en waar de verschillen zich uiten.
 
  \autocite{Claudio2017} en \autocite{Velthoven2016}
 
@@ -44,17 +44,17 @@ Topics zijn, zoals de naam al doet vermoeden, verschillende onderwerpen. Alle be
 \begin{figure}[h!]
     \centering
     \includegraphics[width=80mm]{../kafkaCluster.png}
-    \caption{Voorbeeld van een Kafka cluster}
+    \caption{Voorbeeld van een Kafka cluster, \autocite{Johansson2016}}
     
 \end{figure}
 
- Een topic kan je verdelen in verschillende partities. Dit wil zeggen dat je uw data kunt verdelen in ongeveer gelijke groepen (brokers). Iedere partitie kan dan staan voor een specifieke groep data binnen een topic zodat je niet alle berichten altijd moet overlopen. Dit principe van verschillende partities worden ook gebruikt bij traditionele databanken. Ook consumers kun je verdelen in verschillende partities, die samen één consumer-groep vormen. Door topics en consumers op deze manier op te delen, zorg je ervoor dat het mogelijk is dat meerdere consumers kunnen lezen van meerere partities in een topic. Dit heeft als positief gevolg dat je meer berichten kunt verwerken binnen een bepaalde tijd. 
+ Een topic kan je verdelen in verschillende partities. Dit wil zeggen dat je uw data kunt verdelen in ongeveer gelijke groepen (brokers). Iedere partitie kan dan staan voor een specifieke groep data binnen een topic zodat je niet alle berichten altijd moet overlopen. Dit principe van verschillende partities wordt ook gebruikt bij traditionele databanken. Ook consumers kun je verdelen in verschillende partities, die samen één consumer-groep vormen. Door topics en consumers op deze manier op te delen, zorg je ervoor dat het mogelijk is dat meerdere consumers kunnen lezen van meerdere partities in een topic. Dit heeft als positief gevolg dat je meer berichten kunt verwerken binnen een bepaalde tijd. 
  
- Ieder bericht binnen een partitie heeft een offset. Dit is een identifier, waardoor het mogelijk is om de berichten te ordenen. Normaal gezien als je als consumer je een subscriptie maakt op een topic, dan krijg je vanaf dit moment alle nieuwe berichten die binnen komen op de partitie waarop je een subscriptie hebt. Door een offset is het mogelijk om iets oudere berichten die op een partitie staan dan het moment dat je een subscriptie aangemaakt hebt, ook op te vragen. Op figuur 2.3 zie je een simpele voorstelling van een producer die berichten op een partitie van een topic plaatst. De cijfertjes stellen de offset voor van een bericht.
+ Ieder bericht binnen een partitie heeft een offset. Dit is een identifier, waardoor het mogelijk is om de berichten te ordenen. Normaal gezien als je als consumer een subscriptie maakt op een topic, dan krijg je vanaf dit moment alle nieuwe berichten die binnen komen op de partitie waarop je een subscriptie hebt. Door een offset is het mogelijk om iets oudere berichten die op een partitie staan dan het moment dat je een subscriptie aangemaakt hebt, ook op te vragen. Op figuur 2.3 zie je een simpele voorstelling van een producer die berichten op een partitie van een topic plaatst. De cijfertjes stellen de offset voor van een bericht.
  \begin{figure}[h!]
      \centering
      \includegraphics[width=80mm]{../kafkaOffset.png}
-     \caption{Simpele voorstelling van de werking van een offset}
+     \caption{Simpele voorstelling van de werking van een offset, \autocite{Sookocheff2015}}
      
  \end{figure}
 
@@ -63,7 +63,7 @@ Het is al even vermeld, maar wat is nu eigenlijk een consumer-groep? Dit is een 
  \begin{figure}[h!]
     \centering
     \includegraphics[width=80mm]{../kafkaConsumers.png}
-    \caption{Wisselwerking tussen partities en consumer-groepen}
+    \caption{Wisselwerking tussen partities en consumer-groepen, \autocite{Sookocheff2015}}
     
 \end{figure}
 
@@ -88,7 +88,7 @@ Er zijn vier verschillende soorten van exchanges. Dit zijn: direct, fanout, topi
  \begin{figure}[h!]
     \centering
     \includegraphics[width=60mm]{../rabbitmqExchanges.png}
-    \caption{Werking drie verschillende exchanges bij \emph{RabbitMq}}
+    \caption{Werking drie verschillende exchanges bij \emph{RabbitMq}, \autocite{Johansson2015}}
     
 \end{figure}
 \autocite{Johansson2015}
@@ -97,7 +97,7 @@ Als we kijken naar Google Trends om te bepalen welke van deze twee technologiën
  \begin{figure}[h!]
     \centering
     \includegraphics[width=100mm]{../KvsRMQ1.png}
-    \caption{Populariteit \emph{Kafka} en \emph{RabbitMq} in het afgelopen jaar}
+    \caption{Populariteit \emph{Kafka} en \emph{RabbitMq} in het afgelopen jaar, \autocite{Trends2019}}
     
 \end{figure}
 
@@ -106,14 +106,16 @@ In deze grafiek is duidelijk te zien dat \emph{Kafka} iets populairder is dan \e
  \begin{figure}[h!]
     \centering
     \includegraphics[width=100mm]{../KvsRMQ2.png}
-    \caption{Populariteit \emph{Kafka} en \emph{RabbitMq} in de afgelopen vijf jaar.}
+    \caption{Populariteit \emph{Kafka} en \emph{RabbitMq} in de afgelopen vijf jaar, \autocite{Trends2019}}
     
 \end{figure}
 
 Als je figuur 2.7 bekijkt, dan zie je een algemene trend. Namelijk dat vijf jaar geleden \emph{RabbitMq} veel populairder was, maar dat deze trend systematisch omgedraaid is. Uit deze figuur valt ook af te leiden dat in het algemeen de interesse naar technologieën voor microservices lichtjes toegenomen is in de laatste vijf jaar.
 
+\autocite{Trends2019}
+
 \section{Google Pub/Sub}
-Tijdens het schooljaar dat dit onderzoek is uitgevoerd, is ondertussen ook het bedrijf waarvoor dit onderzocht wordt wat veranderd. Er is momenteel een nieuwe technologie die ook gebruikt wordt, namelijk \emph{Google Pub/Sub}. Zoals de naam doet vermoeden is Google eigenaar van deze technologie. 
+Tijdens het academiejaar dat dit onderzoek is uitgevoerd, zijn de gebruikte technologieën die TVH gebruikt ook wat veranderd. Er is momenteel een nieuwe technologie bij gekomen, namelijk \emph{Google Pub/Sub}. Zoals de naam doet vermoeden is Google eigenaar van deze technologie. 
 
 Ook hier zijn het ongeveer dezelfde kernwoorden die belangrijk zijn:
 \begin{itemize}
@@ -124,18 +126,22 @@ Ook hier zijn het ongeveer dezelfde kernwoorden die belangrijk zijn:
     \item Subscriber
 \end{itemize}
 
-De termen topic en message zijn hetzelfde als bij de andere technologieën, dus deze hoeven niet nog een keer uitgelegd te worden. Subscription is de link tussen de subscriber (deze wordt straks uitgelegd), en de topic. Dit is dus een soort van abonnement die een subscriber aangaat met een topic. Een subscriber is iemand of iets die de verschillende messages van een specifieke topic leest. Een publisher is dan degene die nieuwe messages op een topic plaatst.
+De termen topic en message zijn hetzelfde als bij de andere technologieën. Subscription is de link tussen de subscriber (deze wordt straks uitgelegd), en de topic. Dit is dus een soort van abonnement die een subscriber aangaat met een topic. Een subscriber is iemand of iets die de verschillende messages van een specifieke topic leest. Een publisher is dan degene die nieuwe messages op een topic plaatst.
 
  \begin{figure}[h!]
     \centering
     \includegraphics[width=100mm]{../gpsFlow.png}
-    \caption{De flow die een message aflegt bij \emph{Google Pub/Sub}.}
+    \caption{De flow die een message aflegt bij \emph{Google Pub/Sub}, \autocite{Google2019}}
     
 \end{figure}
 
-Op figuur 2.8 is te zien hoe een message tot bij een subscriber geraakt, iemand of iets die de message leest. Eerste stap is de publisher die een message plaatst (published) naar een topic. Een message bevat een payload, dit is de inhoud van de message. Ook kan er eventueel attributen toegevoegd worden die iets meer vertellen over de inhoud van de payload. Dan in de tweede stap wordt de message opgeslagen in de Message Storage totdat een subscriber de message leest en acknowledged. Hierna zet de Pub/Sub deze message klaar in al zijn subscriptions. Deze message wordt dan gelezen als bijvoorbeeld de subscriber deze message binnen trekt. In de vierde stap zien we dat alle berichten die nog niet gelezen zijn door de subscriber, bij de subscriber binnen komen. Als een message goed is aangekomen, dan wordt er een acknowledge gestuurd naar de subscription. Dan wordt deze message ook verwijdert en kan deze niet meer opnieuw gelezen worden. Dit is de vijfde stap.
+Op figuur 2.8 is te zien hoe een message tot bij een subscriber geraakt, iemand of iets die de message leest. Eerste stap is de publisher die een message plaatst (published) naar een topic. Een message bevat een payload, dit is de inhoud van de message. Ook kan er eventueel attributen toegevoegd worden die iets meer vertellen over de inhoud van de payload. Vervolgens wordt in de tweede stap de message opgeslagen in de Message Storage totdat een subscriber de message leest en acknowledged. Dit wil zeggen dat de subscriber een bevestiging stuurt naar de subscription om te melden dat hij de message goed ontvangen heeft. Hierna zet de Pub/Sub deze message klaar in al zijn subscriptions. Deze message wordt dan gelezen als bijvoorbeeld de subscriber deze message binnen trekt. In de vierde stap zien we dat alle berichten die nog niet gelezen zijn door de subscriber, bij de subscriber binnen komen. Als een message goed is aangekomen, dan wordt er een acknowledge gestuurd naar de subscription. Dan wordt deze message ook verwijderd en kan deze niet meer opnieuw gelezen worden. Dit is de vijfde stap.
 
 \autocite{Google2019}
+
+\section{IoT-applicatie}
+
+\section{TVH}
 
 
 

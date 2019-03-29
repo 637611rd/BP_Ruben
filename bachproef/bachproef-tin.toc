@@ -23,6 +23,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.5}Google Pub/Sub}{21}{section.2.5}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.6}IoT-applicatie}{22}{section.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.7}TVH}{22}{section.2.7}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Methodologie}{23}{chapter.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Conclusie}{25}{chapter.4}

@@ -62,4 +62,17 @@
   address = {https://www.cloudamqp.com/blog/2015-05-18-part1-rabbitmq-for-beginners-what-is-rabbitmq.html},
 }
 
+@Electronic{Google2019,
+  author  = {Google},
+  year    = {2019},
+  title   = {What Is Cloud Pub/Sub?},
+  address = {https://cloud.google.com/pubsub/docs/overview},
+}
+
+@Electronic{Trends2019,
+  author = {Google Trends},
+  year   = {2019},
+  title  = {Kafka vs RabbitMq},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

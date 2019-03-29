@@ -368,6 +368,31 @@
       \field{title}{Kafka in a Nutshell}
       \field{year}{2015}
     \endentry
+    \entry{Trends2019}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=d213852cc46c30c40c40d19f6b5313b4}{%
+           family={Trends},
+           familyi={T\bibinitperiod},
+           given={Google},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d213852cc46c30c40c40d19f6b5313b4}
+      \strng{fullhash}{d213852cc46c30c40c40d19f6b5313b4}
+      \strng{bibnamehash}{d213852cc46c30c40c40d19f6b5313b4}
+      \strng{authorbibnamehash}{d213852cc46c30c40c40d19f6b5313b4}
+      \strng{authornamehash}{d213852cc46c30c40c40d19f6b5313b4}
+      \strng{authorfullhash}{d213852cc46c30c40c40d19f6b5313b4}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Kafka vs RabbitMq}
+      \field{year}{2019}
+    \endentry
     \entry{Velthoven2016}{online}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=47eac567e493c771e34315b795b79e5e}{%
