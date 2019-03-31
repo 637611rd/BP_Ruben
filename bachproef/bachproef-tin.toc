@@ -25,23 +25,29 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.6}IoT-applicatie}{22}{section.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.7}TVH}{22}{section.2.7}
+\contentsline {subsection}{\numberline {2.6.1}Informatie verzamelen en verzenden}{24}{subsection.2.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Methodologie}{23}{chapter.3}
+\contentsline {subsection}{\numberline {2.6.2}Informatie verzamelen en reageren}{24}{subsection.2.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Conclusie}{25}{chapter.4}
+\contentsline {subsection}{\numberline {2.6.3}Combinatie}{24}{subsection.2.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{27}{appendix.A}
+\contentsline {section}{\numberline {2.7}TVH}{25}{section.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Introductie}{27}{section.A.1}
+\contentsline {chapter}{\numberline {3}Methodologie}{27}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Literatuurstudie}{27}{section.A.2}
+\contentsline {chapter}{\numberline {4}Conclusie}{29}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Methodologie}{28}{section.A.3}
+\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{31}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Verwachte resultaten}{28}{section.A.4}
+\contentsline {section}{\numberline {A.1}Introductie}{31}{section.A.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.5}Verwachte conclusies}{29}{section.A.5}
+\contentsline {section}{\numberline {A.2}Literatuurstudie}{31}{section.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{31}{appendix*.6}
+\contentsline {section}{\numberline {A.3}Methodologie}{32}{section.A.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.4}Verwachte resultaten}{32}{section.A.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.5}Verwachte conclusies}{33}{section.A.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{35}{appendix*.6}
 \contentsfinish 

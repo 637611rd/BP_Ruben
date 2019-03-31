@@ -75,4 +75,11 @@
   title  = {Kafka vs RabbitMq},
 }
 
+@Electronic{McClelland2019,
+  author  = {McClelland, Calum},
+  year    = {2019},
+  title   = {What Is IoT? – A Simple Explanation of the Internet of Things},
+  address = {https://www.iotforall.com/what-is-iot-simple-explanation/},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

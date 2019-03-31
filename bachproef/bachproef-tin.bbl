@@ -130,6 +130,31 @@
       \field{title}{Microservices: A Language-Based Approach}
       \field{year}{2017}
     \endentry
+    \entry{i-scoop2019}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=e730e0e893a83f0995a3ac2422634e58}{%
+           family={i-scoop},
+           familyi={i\bibinithyphendelim s\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {https://www.i-scoop.eu/internet-of-things/}%
+      }
+      \strng{namehash}{e730e0e893a83f0995a3ac2422634e58}
+      \strng{fullhash}{e730e0e893a83f0995a3ac2422634e58}
+      \strng{bibnamehash}{e730e0e893a83f0995a3ac2422634e58}
+      \strng{authorbibnamehash}{e730e0e893a83f0995a3ac2422634e58}
+      \strng{authornamehash}{e730e0e893a83f0995a3ac2422634e58}
+      \strng{authorfullhash}{e730e0e893a83f0995a3ac2422634e58}
+      \field{sortinit}{i}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is the Internet of Things?}
+      \field{year}{2019}
+    \endentry
     \entry{Johansson2015}{online}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=146240e8e69f8d303c8af39e1f985cbd}{%
@@ -228,6 +253,34 @@
       \field{type}{mathesis}
       \field{year}{2017}
       \field{dateera}{ce}
+    \endentry
+    \entry{McClelland2019}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=9119b7ce5b8dd439389031fc03556578}{%
+           family={McClelland},
+           familyi={M\bibinitperiod},
+           given={Calum},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {https://www.iotforall.com/what-is-iot-simple-explanation/}%
+      }
+      \strng{namehash}{9119b7ce5b8dd439389031fc03556578}
+      \strng{fullhash}{9119b7ce5b8dd439389031fc03556578}
+      \strng{bibnamehash}{9119b7ce5b8dd439389031fc03556578}
+      \strng{authorbibnamehash}{9119b7ce5b8dd439389031fc03556578}
+      \strng{authornamehash}{9119b7ce5b8dd439389031fc03556578}
+      \strng{authorfullhash}{9119b7ce5b8dd439389031fc03556578}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What Is IoT? – A Simple Explanation of the Internet of Things}
+      \field{year}{2019}
     \endentry
     \entry{Nycander2015}{thesis}{}
       \name{author}{1}{}{%

@@ -7,19 +7,21 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Monolitische architectuur}}{16}{figure.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Voorbeeld van een Kafka cluster, \autocite {Johansson2016}}}{17}{figure.2.2}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Wisselwerking tussen partities en consumer-groepen, \autocite {Sookocheff2015}}}{18}{figure.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Simpele voorstelling van de werking van een offset, \autocite {Sookocheff2015}}}{18}{figure.2.3}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Voorbeeld van een Kafka cluster, \autocite {Johansson2016}}}{19}{figure.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Wisselwerking tussen partities en consumer-groepen, \autocite {Sookocheff2015}}}{18}{figure.2.4}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Simpele voorstelling van de werking van een offset, \autocite {Sookocheff2015}}}{19}{figure.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Werking drie verschillende exchanges bij \emph {RabbitMq}, \autocite {Johansson2015}}}{19}{figure.2.5}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Werking drie verschillende exchanges bij \emph {RabbitMq}, \autocite {Johansson2015}}}{20}{figure.2.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Populariteit \emph {Kafka} en \emph {RabbitMq} in het afgelopen jaar, \autocite {Trends2019}}}{20}{figure.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Populariteit \emph {Kafka} en \emph {RabbitMq} in de afgelopen vijf jaar, \autocite {Trends2019}}}{20}{figure.2.7}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Populariteit \emph {Kafka} en \emph {RabbitMq} in de afgelopen vijf jaar, \autocite {Trends2019}}}{21}{figure.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.8}{\ignorespaces De flow die een message aflegt bij \emph {Google Pub/Sub}, \autocite {Google2019}}}{21}{figure.2.8}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces De flow die een message aflegt bij \emph {Google Pub/Sub}, \autocite {Google2019}}}{22}{figure.2.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.9}{\ignorespaces De gecre\IeC {\"e}erde waarde van IoT, \autocite {i-scoop2019}}}{23}{figure.2.9}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

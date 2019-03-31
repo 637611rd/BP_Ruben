@@ -2125,30 +2125,33 @@
     <bcf:datasource type="file" datatype="bibtex">../voorstel/voorstel.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="15">Pollefliet2011</bcf:citekey>
-    <bcf:citekey order="16">Claudio2017</bcf:citekey>
-    <bcf:citekey order="17">Velthoven2016</bcf:citekey>
-    <bcf:citekey order="18">Johansson2016</bcf:citekey>
-    <bcf:citekey order="19">Sookocheff2015</bcf:citekey>
+    <bcf:citekey order="17">Pollefliet2011</bcf:citekey>
+    <bcf:citekey order="18">Claudio2017</bcf:citekey>
+    <bcf:citekey order="19">Velthoven2016</bcf:citekey>
     <bcf:citekey order="20">Sookocheff2015</bcf:citekey>
-    <bcf:citekey order="21">Sookocheff2015</bcf:citekey>
-    <bcf:citekey order="22">Johansson2016</bcf:citekey>
-    <bcf:citekey order="23">Johansson2015</bcf:citekey>
-    <bcf:citekey order="24">Johansson2015</bcf:citekey>
-    <bcf:citekey order="25">Trends2019</bcf:citekey>
-    <bcf:citekey order="26">Trends2019</bcf:citekey>
+    <bcf:citekey order="21">Johansson2016</bcf:citekey>
+    <bcf:citekey order="22">Sookocheff2015</bcf:citekey>
+    <bcf:citekey order="23">Sookocheff2015</bcf:citekey>
+    <bcf:citekey order="24">Johansson2016</bcf:citekey>
+    <bcf:citekey order="25">Johansson2015</bcf:citekey>
+    <bcf:citekey order="26">Johansson2015</bcf:citekey>
     <bcf:citekey order="27">Trends2019</bcf:citekey>
-    <bcf:citekey order="28">Google2019</bcf:citekey>
-    <bcf:citekey order="29">Google2019</bcf:citekey>
-    <bcf:citekey order="30">Shadija2017</bcf:citekey>
-    <bcf:citekey order="31">Khazaei2017</bcf:citekey>
-    <bcf:citekey order="32">Shadija2017</bcf:citekey>
-    <bcf:citekey order="33">Khazaei2017</bcf:citekey>
-    <bcf:citekey order="34">Khazaei2017</bcf:citekey>
-    <bcf:citekey order="35">Khazaei2017</bcf:citekey>
+    <bcf:citekey order="28">Trends2019</bcf:citekey>
+    <bcf:citekey order="29">Trends2019</bcf:citekey>
+    <bcf:citekey order="30">Google2019</bcf:citekey>
+    <bcf:citekey order="31">Google2019</bcf:citekey>
+    <bcf:citekey order="32">i-scoop2019</bcf:citekey>
+    <bcf:citekey order="33">McClelland2019</bcf:citekey>
+    <bcf:citekey order="34">i-scoop2019</bcf:citekey>
+    <bcf:citekey order="35">Shadija2017</bcf:citekey>
     <bcf:citekey order="36">Khazaei2017</bcf:citekey>
-    <bcf:citekey order="37">Nycander2015</bcf:citekey>
-    <bcf:citekey order="38">Cherradi2017</bcf:citekey>
+    <bcf:citekey order="37">Shadija2017</bcf:citekey>
+    <bcf:citekey order="38">Khazaei2017</bcf:citekey>
+    <bcf:citekey order="39">Khazaei2017</bcf:citekey>
+    <bcf:citekey order="40">Khazaei2017</bcf:citekey>
+    <bcf:citekey order="41">Khazaei2017</bcf:citekey>
+    <bcf:citekey order="42">Nycander2015</bcf:citekey>
+    <bcf:citekey order="43">Cherradi2017</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">
