@@ -472,6 +472,34 @@
       \field{title}{10 dingen die je moet weten over microservices}
       \field{year}{2016}
     \endentry
+    \entry{Xu2019}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=ee0185f7e9990a1e5d9009694d45df78}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {https://hackernoon.com/understand-service-discovery-in-microservice-c323e78f47fd}%
+      }
+      \strng{namehash}{ee0185f7e9990a1e5d9009694d45df78}
+      \strng{fullhash}{ee0185f7e9990a1e5d9009694d45df78}
+      \strng{bibnamehash}{ee0185f7e9990a1e5d9009694d45df78}
+      \strng{authorbibnamehash}{ee0185f7e9990a1e5d9009694d45df78}
+      \strng{authornamehash}{ee0185f7e9990a1e5d9009694d45df78}
+      \strng{authorfullhash}{ee0185f7e9990a1e5d9009694d45df78}
+      \field{sortinit}{X}
+      \field{sortinithash}{b0b62a29ee4a21a0e618fed53a0313cc}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Service discovery in microservice architecture}
+      \field{year}{2019}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

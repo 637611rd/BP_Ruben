@@ -82,4 +82,11 @@
   address = {https://www.iotforall.com/what-is-iot-simple-explanation/},
 }
 
+@Electronic{i-scoop2019,
+  author  = {i-scoop},
+  year    = {2019},
+  title   = {What is the Internet of Things?},
+  address = {https://www.i-scoop.eu/internet-of-things/},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
