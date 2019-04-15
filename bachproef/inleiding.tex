@@ -5,32 +5,31 @@
 \chapter{Inleiding}
 \label{ch:inleiding}
 
-De inleiding moet de lezer net genoeg informatie verschaffen om het onderwerp te begrijpen en in te zien waarom de onderzoeksvraag de moeite waard is om te onderzoeken. In de inleiding ga je literatuurverwijzingen beperken, zodat de tekst vlot leesbaar blijft. Je kan de inleiding verder onderverdelen in secties als dit de tekst verduidelijkt. Zaken die aan bod kunnen komen in de inleiding~\autocite{Pollefliet2011}:
+Dit onderzoek wordt uitgevoerd ten voordele van het bedrijf TVH. Dit is een familiebedrijf die oorspronkelijk opgericht is door Paul Thermote en Paul Vanhalst. Ze begonnen in een schuur waar ze kapotte landbouwmachines en forklifts repareerden. Later begonnen ze ook met het verkopen van deze machines. Dit bestond voornamelijk uit het repareren van tweedehands machines en het verkopen ervan. Vervolgens begonnen ze snel met het verhuren van deze werktuigen. Nog enkele jaren later begonnen ze met de verkoop van vervangonderdelen voor machines. Nadien werden er nog een paar bedrijven overgenomen waardoor het bedrijf uitgroeide tot het grote bedrijf dat we vandaag de dag kennen. 
 
-\begin{itemize}
-  \item context, achtergrond
-  \item afbakenen van het onderwerp
-  \item verantwoording van het onderwerp, methodologie
-  \item probleemstelling
-  \item onderzoeksdoelstelling
-  \item onderzoeksvraag
-  \item \ldots
-\end{itemize}
+Maar wat is het nut nu van dit onderzoek voor TVH? Zoals je overal ziet, is internet bijna nergens meer weg te denken. Ook voor dit bedrijf kan internet enkele voordelen bieden. Zoals later vermeld in sectie 2.6 over IoT-applicatie gebruikt TVH vooral de eerste categorie, namelijk het verzamelen van informatie en het verzenden ervan.
+
+Al deze informatie wordt samengebracht en verwerkt. De IoT-applicatie die deze informatie effectief zal verwerken heeft een grote verantwoordelijkheid. Het is namelijk belangrijk dat er geen data verloren gaat bij het verzenden en dat de data heel snel verwerkt kan worden. Er zijn enkele mogelijkheden van software om met deze informatie om te gaan. Dit onderzoek zal nagaan welke technologie het beste is om te gebruiken voor TVH met zijn specifieke data.
+
+Doordat dit onderzoek zal aantonen welke technologie de beste zal zijn, ontstaan er enkele voordelen voor het bedrijf TVH. Op deze manier kan er data op de meest efficiënte wijze verzonden worden waardoor alles ook sneller verwerkt kan worden. Hierdoor kan het bedrijf meer winst maken omdat het sneller conclusies kan trekken uit de verkregen data. 
+
+
+
 
 \section{Probleemstelling}
 \label{sec:probleemstelling}
 
-Uit je probleemstelling moet duidelijk zijn dat je onderzoek een meerwaarde heeft voor een concrete doelgroep. De doelgroep moet goed gedefinieerd en afgelijnd zijn. Doelgroepen als ``bedrijven,'' ``KMO's,'' systeembeheerders, enz.~zijn nog te vaag. Als je een lijstje kan maken van de personen/organisaties die een meerwaarde zullen vinden in deze bachelorproef (dit is eigenlijk je steekproefkader), dan is dat een indicatie dat de doelgroep goed gedefinieerd is. Dit kan een enkel bedrijf zijn of zelfs één persoon (je co-promotor/opdrachtgever).
+Als technologie werd er vroeger binnen het bedrijf \emph{RabbitMq} gebruikt. Ondertussen zijn alle teams overgeschakeld naar een andere technologie namelijk \emph{Kafka}. Oorspronkelijk was het dus de bedoeling van dit onderzoek om deze twee met elkaar te vergelijken en te concluderen dat TVH al dan niet de juiste beslissing had gemaakt om over te schakelen naar \emph{Kafka}. Ondertussen ben ik ook al gestart met mijn stage binnen TVH waarbij ik deel uit maak van een student-squad. Binnen ons team gebruiken wij \emph{Kafka} noch \emph{RabbitMq}. Wij gebruiken een derde mogelijkheid \emph{Google Pub/Sub}. Maar alle andere teams hebben nog steeds \emph{Kafka} als technologie dat ze gebruiken. Er zijn dus verschillende technologiën die gebruikt worden binnen dit bedrijf. Waarbij niemand weet welke nu eigenlijk het beste is om te gebruiken. 
 
 \section{Onderzoeksvraag}
 \label{sec:onderzoeksvraag}
 
-Wees zo concreet mogelijk bij het formuleren van je onderzoeksvraag. Een onderzoeksvraag is trouwens iets waar nog niemand op dit moment een antwoord heeft (voor zover je kan nagaan). Het opzoeken van bestaande informatie (bv. ``welke tools bestaan er voor deze toepassing?'') is dus geen onderzoeksvraag. Je kan de onderzoeksvraag verder specifiëren in deelvragen. Bv.~als je onderzoek gaat over performantiemetingen, dan 
+De bedoeling van dit onderzoek is deze drie technologieën vergelijken en concluderen welke ervan de beste blijkt te zijn. Zo komt het bedrijf te weten als het handig zou zijn om in elk team te blijven werken met \emph{Kafka} of om terug over te schakelen naar een andere technologie. 
 
 \section{Onderzoeksdoelstelling}
 \label{sec:onderzoeksdoelstelling}
 
-Wat is het beoogde resultaat van je bachelorproef? Wat zijn de criteria voor succes? Beschrijf die zo concreet mogelijk.
+Dit onderzoek zal geslaagd zijn indien we voor TVH met hun specifieke data kunnen concluderen welke technologie het beste kan gebruikt worden voor alle teams. Op deze manier werkt elk team met dezelfde technologie en kan er ook meer kennis gedeeld worden met elkaar onderling.
 
 \section{Opzet van deze bachelorproef}
 \label{sec:opzet-bachelorproef}
@@ -41,11 +40,12 @@ Wat is het beoogde resultaat van je bachelorproef? Wat zijn de criteria voor suc
 
 De rest van deze bachelorproef is als volgt opgebouwd:
 
-In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand van zaken binnen het onderzoeksdomein, op basis van een literatuurstudie.
+In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand van zaken binnen het onderzoeksdomein, op basis van een literatuurstudie. Enkele begrippen worden grondig uitgelegd alsook de werking van de verschillende technologieën.
 
 In Hoofdstuk~\ref{ch:methodologie} wordt de methodologie toegelicht en worden de gebruikte onderzoekstechnieken besproken om een antwoord te kunnen formuleren op de onderzoeksvragen.
 
 % TODO: Vul hier aan voor je eigen hoofstukken, één of twee zinnen per hoofdstuk
 
-In Hoofdstuk~\ref{ch:conclusie}, tenslotte, wordt de conclusie gegeven en een antwoord geformuleerd op de onderzoeksvragen. Daarbij wordt ook een aanzet gegeven voor toekomstig onderzoek binnen dit domein.
+In Hoofdstuk~\ref{ch:conclusie}, tenslotte, wordt de conclusie gegeven en een antwoord geformuleerd op de onderzoeksvragen. 
+%Daarbij wordt ook een aanzet gegeven voor toekomstig onderzoek binnen dit domein.
 

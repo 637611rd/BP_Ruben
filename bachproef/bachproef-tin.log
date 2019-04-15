@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.23)  5 APR 2019 10:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.23)  12 APR 2019 11:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1836,40 +1836,34 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 5.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 11.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 11.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 20.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 25.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 19.
 
-Underfull \vbox (badness 5133) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 23.
  [13]
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 29.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 34.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 34.
 )
 (./standvanzaken.tex
 Package babel Info: Redefining dutch shorthand "|
@@ -1890,7 +1884,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 9.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 9.
-<../monolith.png, id=215, 233.87375pt x 256.96pt>
+<../monolith.png, id=213, 233.87375pt x 256.96pt>
 File: ../monolith.png Graphic file (type png)
 <use ../monolith.png>
 Package pdftex.def Info: ../monolith.png  used on input line 17.
@@ -1920,6 +1914,12 @@ Package babel Info: Redefining dutch shorthand "|
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 28.
  [16 <../monolith.png>]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 28.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 28.
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 38.
 Package babel Info: Redefining dutch shorthand "~
@@ -1932,13 +1932,14 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 47.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 47.
- [17]
-<../kafkaConsumers.png, id=238, 417.56pt x 222.8325pt>
+
+[17]
+<../kafkaConsumers.png, id=236, 417.56pt x 222.8325pt>
 File: ../kafkaConsumers.png Graphic file (type png)
 <use ../kafkaConsumers.png>
 Package pdftex.def Info: ../kafkaConsumers.png  used on input line 52.
 (pdftex.def)             Requested size: 227.62204pt x 121.4736pt.
-<../kafkaCluster.png, id=240, 427.5975pt x 281.05pt>
+<../kafkaCluster.png, id=238, 427.5975pt x 281.05pt>
 File: ../kafkaCluster.png Graphic file (type png)
 <use ../kafkaCluster.png>
 Package pdftex.def Info: ../kafkaCluster.png  used on input line 63.
@@ -1947,7 +1948,7 @@ Package pdftex.def Info: ../kafkaCluster.png  used on input line 63.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../kafkaOffset.png, id=242, 424.58624pt x 254.9525pt>
+<../kafkaOffset.png, id=240, 424.58624pt x 254.9525pt>
 File: ../kafkaOffset.png Graphic file (type png)
 <use ../kafkaOffset.png>
 Package pdftex.def Info: ../kafkaOffset.png  used on input line 72.
@@ -1974,7 +1975,7 @@ Package babel Info: Redefining dutch shorthand "|
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 87.
  [19 <../kafkaCluster.png> <../kafkaOffset.png>]
-<../rabbitmqExchanges.png, id=257, 781.92125pt x 478.78876pt>
+<../rabbitmqExchanges.png, id=255, 781.92125pt x 478.78876pt>
 File: ../rabbitmqExchanges.png Graphic file (type png)
 <use ../rabbitmqExchanges.png>
 Package pdftex.def Info: ../rabbitmqExchanges.png  used on input line 98.
@@ -1983,7 +1984,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 103.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 103.
-<../KvsRMQ1.png, id=260, 454.3374pt x 236.5638pt>
+<../KvsRMQ1.png, id=258, 454.3374pt x 236.5638pt>
 File: ../KvsRMQ1.png Graphic file (type png)
 <use ../KvsRMQ1.png>
 Package pdftex.def Info: ../KvsRMQ1.png  used on input line 107.
@@ -1992,7 +1993,7 @@ Package pdftex.def Info: ../KvsRMQ1.png  used on input line 107.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../KvsRMQ2.png, id=262, 454.3374pt x 236.5638pt>
+<../KvsRMQ2.png, id=260, 454.3374pt x 236.5638pt>
 File: ../KvsRMQ2.png Graphic file (type png)
 <use ../KvsRMQ2.png>
 Package pdftex.def Info: ../KvsRMQ2.png  used on input line 116.
@@ -2022,7 +2023,7 @@ Package babel Info: Redefining dutch shorthand "|
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 134.
  [21 <../KvsRMQ1.png> <../KvsRMQ2.png>]
-<../gpsFlow.png, id=276, 541.02126pt x 380.42125pt>
+<../gpsFlow.png, id=274, 541.02126pt x 380.42125pt>
 File: ../gpsFlow.png Graphic file (type png)
 <use ../gpsFlow.png>
 Package pdftex.def Info: ../gpsFlow.png  used on input line 141.
@@ -2040,7 +2041,7 @@ Package babel Info: Redefining dutch shorthand "|
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 152.
  [22 <../gpsFlow.png>]
-<../IoT.png, id=284, 408.52625pt x 483.8075pt>
+<../IoT.png, id=282, 408.52625pt x 483.8075pt>
 File: ../IoT.png Graphic file (type png)
 <use ../IoT.png>
 Package pdftex.def Info: ../IoT.png  used on input line 157.
@@ -2079,15 +2080,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 187.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 187.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 196.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 196.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 196.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 196.
- [25]) (./methodologie.tex
+) (./methodologie.tex
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining dutch shorthand "~
@@ -2096,7 +2089,18 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 5.
- [26]
+ [25]
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 5.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 5.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 5.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 5.
+ [26
+
+]
 Hoofdstuk 3.
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 5.
@@ -2113,9 +2117,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 14.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 14.
- [27
-
-])
+ [27])
 (./conclusie.tex
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 5.
@@ -2255,10 +2257,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 126.
  ) 
 Here is how much of TeX's memory you used:
  38521 strings out of 492649
- 719600 string characters out of 6129622
- 1329814 words of memory out of 5000000
- 41536 multiletter control sequences out of 15000+600000
- 581226 words of font info for 187 fonts, out of 8000000 for 9000
+ 719579 string characters out of 6129622
+ 1329771 words of memory out of 5000000
+ 41533 multiletter control sequences out of 15000+600000
+ 581451 words of font info for 189 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,12n,69p,10420b,3825s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -2269,10 +2271,10 @@ mf-dist/fonts/type1/urw/avantgar/uagko8a.pfb></usr/local/texlive/2018/texmf-dis
 t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on bachproef-tin.pdf (37 pages, 1642215 bytes).
+Output written on bachproef-tin.pdf (37 pages, 1642233 bytes).
 PDF statistics:
- 484 PDF objects out of 1000 (max. 8388607)
- 372 compressed objects within 4 object streams
+ 483 PDF objects out of 1000 (max. 8388607)
+ 371 compressed objects within 4 object streams
  90 named destinations out of 1000 (max. 500000)
  28423 words of extra memory for PDF output out of 29859 (max. 10000000)
 
