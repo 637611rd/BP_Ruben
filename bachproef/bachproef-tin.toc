@@ -35,19 +35,37 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Methodologie}{27}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Conclusie}{29}{chapter.4}
+\contentsline {section}{\numberline {3.1}Opzet project}{27}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{31}{appendix.A}
+\contentsline {subsection}{\numberline {3.1.1}Kafka}{28}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Introductie}{31}{section.A.1}
+\contentsline {subsubsection}{KafkaConfig}{28}{section*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Literatuurstudie}{31}{section.A.2}
+\contentsline {subsubsection}{KafkaPublisher}{29}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Methodologie}{32}{section.A.3}
+\contentsline {subsection}{\numberline {3.1.2}RabbitMq}{30}{subsection.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Verwachte resultaten}{32}{section.A.4}
+\contentsline {subsection}{\numberline {3.1.3}Google Pub/Sub}{30}{subsection.3.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.5}Verwachte conclusies}{33}{section.A.5}
+\contentsline {subsubsection}{GooglePubSubConfig}{30}{section*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{35}{appendix*.6}
+\contentsline {subsubsection}{GooglePubSubPublisher}{31}{section*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Onderzoek}{32}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Conclusie}{33}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{35}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Introductie}{35}{section.A.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}Literatuurstudie}{35}{section.A.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}Methodologie}{36}{section.A.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.4}Verwachte resultaten}{36}{section.A.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.5}Verwachte conclusies}{37}{section.A.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{39}{appendix*.10}
 \contentsfinish 
