@@ -254,6 +254,27 @@
       \field{year}{2017}
       \field{dateera}{ce}
     \endentry
+    \entry{lombok}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=cc6220f96576cc20a6a7ed9db86a9212}{%
+           family={lombok},
+           familyi={l\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {https://projectlombok.org/features/all}%
+      }
+      \strng{namehash}{cc6220f96576cc20a6a7ed9db86a9212}
+      \strng{fullhash}{cc6220f96576cc20a6a7ed9db86a9212}
+      \strng{bibnamehash}{cc6220f96576cc20a6a7ed9db86a9212}
+      \strng{authorbibnamehash}{cc6220f96576cc20a6a7ed9db86a9212}
+      \strng{authornamehash}{cc6220f96576cc20a6a7ed9db86a9212}
+      \strng{authorfullhash}{cc6220f96576cc20a6a7ed9db86a9212}
+      \field{sortinit}{l}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+    \endentry
     \entry{McClelland2019}{online}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=9119b7ce5b8dd439389031fc03556578}{%
@@ -314,37 +335,6 @@
       \field{type}{mathesis}
       \field{year}{2015}
       \field{dateera}{ce}
-    \endentry
-    \entry{Pollefliet2011}{book}{}
-      \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=7ca343ebcc6de1727ac22a1a847c21e5}{%
-           family={Pollefliet},
-           familyi={P\bibinitperiod},
-           given={Leen},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {Gent}%
-      }
-      \list{publisher}{1}{%
-        {Academia Press}%
-      }
-      \strng{namehash}{7ca343ebcc6de1727ac22a1a847c21e5}
-      \strng{fullhash}{7ca343ebcc6de1727ac22a1a847c21e5}
-      \strng{bibnamehash}{7ca343ebcc6de1727ac22a1a847c21e5}
-      \strng{authorbibnamehash}{7ca343ebcc6de1727ac22a1a847c21e5}
-      \strng{authornamehash}{7ca343ebcc6de1727ac22a1a847c21e5}
-      \strng{authorfullhash}{7ca343ebcc6de1727ac22a1a847c21e5}
-      \field{sortinit}{P}
-      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Schrijven van verslag tot eindwerk: do's en don'ts}
-      \field{year}{2011}
     \endentry
     \entry{Shadija2017}{thesis}{}
       \name{author}{3}{}{%
