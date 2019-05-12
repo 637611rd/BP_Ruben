@@ -121,39 +121,31 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Kafka}{58}{section*.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{RabbitMq}{58}{section*.34}
+\contentsline {subsubsection}{RabbitMq}{59}{section*.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Vergelijking}{58}{section*.35}
+\contentsline {subsubsection}{Vergelijking}{59}{section*.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.4}Conclusie snelheid}{58}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.4}Conclusie snelheid}{60}{subsection.4.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Memory}{58}{section.4.2}
+\contentsline {section}{\numberline {4.2}Memory}{60}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}1 000 objecten}{58}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.1}1 000 objecten}{60}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Google Pub/Sub}{58}{section*.36}
+\contentsline {subsection}{\numberline {4.2.2}Conclusie memory}{60}{subsection.4.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Kafka}{58}{section*.37}
+\contentsline {section}{\numberline {4.3}Algemene conclusie}{61}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{RabbitMq}{58}{section*.38}
+\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{63}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Vergelijking}{58}{section*.39}
+\contentsline {section}{\numberline {A.1}Introductie}{63}{section.A.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Conclusie memory}{58}{subsection.4.2.2}
+\contentsline {section}{\numberline {A.2}Literatuurstudie}{63}{section.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Algemene conclusie}{58}{section.4.3}
+\contentsline {section}{\numberline {A.3}Methodologie}{64}{section.A.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{59}{appendix.A}
+\contentsline {section}{\numberline {A.4}Verwachte resultaten}{64}{section.A.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Introductie}{59}{section.A.1}
+\contentsline {section}{\numberline {A.5}Verwachte conclusies}{65}{section.A.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Literatuurstudie}{59}{section.A.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Methodologie}{60}{section.A.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Verwachte resultaten}{60}{section.A.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.5}Verwachte conclusies}{61}{section.A.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{63}{appendix*.40}
+\contentsline {chapter}{Bibliografie}{67}{appendix*.36}
 \contentsfinish 

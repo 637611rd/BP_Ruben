@@ -167,21 +167,103 @@ Het resultaat van de maxima weerspiegelt zich ook opnieuw in de gemiddeldes. Ook
 Conclusie bij 100 000 objecten: Alhoewel de minimum tijd bij Google Pub/Sub opnieuw hoger ligt of bij Kafka en RabbitMq, slaagt Google Pub/Sub er toch in om behoorlijk wat sneller al de data te verwerken. 
 
 \subsection{1 000 000 objecten}
+De laatste hoeveelheid objecten die we onderzoeken is nog eens tien keer zo veel. We kijken ook eens wat het resultaat is bij 1 000 000 objecten.
 \subsubsection{Google Pub/Sub}
+De resultaten van de snelheden bij 1 000 000 objecten van Google Pub/Sub zien er als volgt uit:
+\begin{table}[h!]
+    \centering
+    \label{q1}
+    \begin{tabular}{| 1 | c |}
+        \hline
+        & Tijd (ms)\\ \hline
+        min. &  3327\\
+        gem. & 577596.5258098603 \\
+        max. & 1037761\\
+        \# ontvangen. & 556 454\\ \hline
+    \end{tabular}
+    \caption{Verschil tussen ontvangen en verzenden (in ms) - Google Pub/Sub}
+\end{table}
+
+We zien dus dat het kleinste verschil iets meer is dan drie seconden, en het grootste verschil bijna 1037 seconden, wat bijna 17 minuten is. Het gemiddeld aantal seconden ligt rond de 577 seconden, wat iets meer dan 9,5 minuten is. Hier is Google Pub/Sub voor het eerst niet in geslaagd om alle objecten te ontvangen. Het zal dus ook hier wat moeilijker zijn om het gemiddelde en het maximum te vergelijken.
+
 \subsubsection{Kafka}
+De resultaten van de snelheden bij 1 000 000 objecten van Kafka zien er als volgt uit:
+\begin{table}[h!]
+    \centering
+    \label{q1}
+    \begin{tabular}{| 1 | c |}
+        \hline
+        & Tijd (ms)\\ \hline
+        min. & 3930  \\
+        gem. & 1719014.245389 \\
+        max. & 3424980\\
+        \# ontvangen. & 1 000 000\\ \hline
+    \end{tabular}
+    \caption{Verschil tussen ontvangen en verzenden (in ms) - Kafka}
+\end{table}
+
+Het kleinste verschil ligt nu niet meer rond de seconde, maar is nu gestegen naar bijna vier seconden. Het grootste verschil ligt rond de 3424 seconden, wat bijna een uur is. Het gemiddeld aantal seconden ligt rond de 1719 seconden, omgerekend is dit bijna een half uur.
+
 \subsubsection{RabbitMq}
+De resultaten van de snelheden bij 1 000 000 objecten van RabbitMq zien er als volgt uit:
+\begin{table}[h!]
+    \centering
+    \label{q1}
+    \begin{tabular}{| 1 | c |}
+        \hline
+        & Tijd (ms)\\ \hline
+        min. & 1345  \\
+        gem. & 300640.46033216227 \\
+        max. & 590104\\
+        \# ontvangen. & 59 802\\ \hline
+    \end{tabular}
+    \caption{Verschil tussen ontvangen en verzenden (in ms) - RabbitMq}
+\end{table}
+
+RabbitMq is ook hier niet in geslaagd om alle objecten te ontvangen. De minimum tijd is voor het eerst gestegen naar iets meer dan een seconde. Het gemiddelde ligt op 300 seconden. En het duurt nooit langer dan 590 seconden of een kleine tien minuten om een object te ontvangen.
+
 \subsubsection{Vergelijking}
+Ook bij deze hoeveelheid aan objecten zetten we de drie technologieën eens naast elkaar. Deze boxplots zijn te zien op figuur 4.3
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=100mm]{../1000000Boxplot.png}
+    \caption{Vergelijking bij 1 000 000 objecten}
+    
+\end{figure}
+
+Nu is het wat moeilijker om de snelheden met elkaar te gaan vergelijken aangezien de drie verschillende technologiëen verschillend aantal objecten hebben ontvangen. Toch overlopen we de technologieën eens.
+
+Eerst gaan we de minimum waarden bekijken, hier kunnen we nog alle drie met elkaar vergelijken. Daarin is te zien dat RabbitMq nog steeds de kortste tijd heeft van de drie minimum waarden. Deze waarde is wel gestegen naar iets boven de seconde, maar blijft nog steeds de beste. Kafka is voor het eerst ook opvallend gestegen. De waarde is bijna vier keer zo groot geworden. Bij Google Pub/Sub zien we ook een stijging, het minimum ligt nu ook rond de drie seconden. Kafka heeft dus bij deze hoeveelheid het meeste tijd nodig als minimum waarde. 
+
+Laat ons nu kijken naar de maximum tijd. Dit is wat moeilijker om te vergelijken aangezien al de technologieën verschillend aantal objecten ontvangen hebben. Kafka heeft het meeste tijd nodig, maar heeft ook het meeste objecten ontvangen. RabbitMq en Google Pub/Sub hebben ongeveer evenveel ontvangen, en daar zien we RabbitMq toch duidelijk beter zijn voor de maximum waarde.
+
+Het resultaat van de maxima weerspiegelt zich ook opnieuw in de gemiddeldes. De verhoudingen zijn hetzelfde als bij de maximum waardes
+
+Conclusie bij 1 000 000 objecten: RabbitMq doet het beter dan Google Pub/Sub. Kafka is moeilijk te vergelijken met de twee andere.
 
 \subsection{Conclusie snelheid}
+Op het gebied van snelheid is Kafka over het algemeen gezien de slechtste. Google Pub/Sub doet het over het algemeen gezien het beste, behalve bij super veel objecten (hier: 1 000 000) doet RabbitMq beter dan Google Pub/Sub.
 
 \section{Memory}
 \subsection{1 000 objecten}
-\subsubsection{Google Pub/Sub}
-\subsubsection{Kafka}
-\subsubsection{RabbitMq}
-\subsubsection{Vergelijking}
-
+Omdat de operatie om aan de Java runtime de gebruikte memory te vragen te lang duurt, wordt er enkel gekeken bij 1 000 objecten. Er wordt hier geen rekening gehouden met de snelheden.
 \subsection{Conclusie memory}
 
+Op figuur 4.4 ziet u de boxplots van het resultaat van het memory gebruik. Het is duidelijk te zien dat er bij alle technologieën enkele uitschieters zijn. Maar het is ook duidelijk dat over het algemeen voor het memory gebruik RabbitMq beter is. Het gemiddelde, maximum en het minimum liggen lager in vergelijking met de andere. Gemiddeld heeft RabbitMq 33.138 MB nodig. Google Pub/Sub en Kafka hebben gemiddeld 36.31 en 33.601 nodig. RabbitMq is dus beter maar het verschil met Kafka is klein. Het is enkel Google Pub/Sub die veel meer memory nodig heeft dan de rest.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=100mm]{../memory.png}
+    \caption{Vergelijking memory}
+    
+\end{figure}
+
+
+
 \section{Algemene conclusie}
+Wanneer snelheid voor een bedrijf het belangrijkste is, dan lijkt Google Pub/Sub het beste. Tenzij je heel veel objecten hebt (meer dan 1 000 000) dan lijkt RabbitMq sneller te werken. Het memory gebruik is het best bij RabbitMq maar Kafka doet het niet veel slechter. Bij Kafka ben je het meest zeker dat je effectief al je verzonden data meteen ontvangt. Hier slaagt RabbitMq het slechtste op.
+
+Voor TVH specifiek lijkt het belangrijkste dat alle data zeker meteen ontvangen wordt. Omdat Kafka hierop het beste scoort en bijna de beste is op basis van memory gebruik, lijkt Kafka de beste technologie om te gebruiken binnen dit bedrijf.
+
+Een verder onderzoek zou dit onderzoek enkele keren kunnen herhalen om te bepalen hoe frequent verzonden data niet meteen aankomt. 
 

@@ -21,5 +21,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {4.6}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - RabbitMq}}{56}{table.4.6}
 \defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.7}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - Google Pub/Sub}}{58}{table.4.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.8}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - Kafka}}{58}{table.4.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.9}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - RabbitMq}}{59}{table.4.9}
+\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \contentsfinish 
