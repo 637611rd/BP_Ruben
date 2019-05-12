@@ -129,12 +129,12 @@ Zo ziet de implementatie van de KafkaConfig.class eruit.
      
      Boven de klasse ziet u de annotatie @Configuration. Dit is een annotatie van het Spring framework. Deze zorgt ervoor dat je aangeeft dat deze klasse een configuratie instelt. In de klasse ziet u boven de methode kafkaProperties twee andere annotaties staan. @Bean zorgt ervoor dat er een bean aangemaakt wordt voor deze methode. Dit zorgt ervoor dat door het Spring framework voor deze methode eerder een instantie aangemaakt wordt en daardoor de applicatie bij het opstarten deze properties kan instellen. Daaronder zie je een andere annotatie die hiermee te maken heeft: @Primary. Deze zorgt ervoor als het Spring framework meerdere beans heeft van KafkaProperties, dat hij deze voorneemt op al de andere. Op deze manier zijn we zeker dat deze properties gebruikt worden en niet andere indien er meerdere beans zouden zijn.
      
-     U ziet dat er tamelijk wat properties geconfigureerd zijn. Er zullen slechts enkele properties besproken worden, uiteraard zijn dit de belangrijkste voor dit onderzoek. In dit hoofdstuk werd al eens vermeld dat het object van de klasse Data niet zomaar omgezet wordt naar een Json. Hiervoor is er een serializer nodig die dit doet. Op lijn 16 van de KafkaConfig klasse is er te zien dat de gekozen serializer ingesteld wordt. In dit geval wordt de JsonSerializer gebruikt uit de package springframework.kafka.support.serializer. Dit is dus een specifieke JsonSerializer voor Kafka. De key wordt dan weer geserializeerd naar een String door de StringSerializer uit de package org.apache.kafka.common.serialization, dit is te zien op de regel er boven. Wat als het niet lukt voor de producer om de data te verzenden? In ons geval mag hij dit niet opnieuw proberen. Op deze manier kunnen we ook te weten komen hoeveel data er mislukt is om te verzenden. Dit zie je op lijn 19. Indien je meer zekerheid wilt dat je een data object zeker verzonden wordt, dan kan je deze property in plaats van 0 op bijvoorbeeld 3 zetten. Je mag zeker ook niet vergeten om de username en password mee te geven van waar je Kafka topic zich bevindt. Op lijn 28 en 29 zie je dat dit meegegeven wordt. De username en wachtwoord worden niet in plaintext in de code geplaatst. Het is niet de bedoeling dat iedereen weet wat het wachtwoord en username is. Deze worden ingesteld in uw application.yml en worden meegegeven via de parameters van de methode door het spring framework. Door de annotatie @Value en de naam van de key van uw waarden in de application.yml, weet spring perfect waar hij het wachtwoord en username moet gaan halen.
+     U ziet dat er tamelijk wat properties geconfigureerd zijn. Er zullen slechts enkele properties besproken worden, uiteraard zijn dit de belangrijkste voor dit onderzoek. In dit hoofdstuk werd al eens vermeld dat het object van de klasse Data niet zomaar omgezet wordt naar een Json. Hiervoor is er een serializer nodig die dit doet. Op lijn 16 van de KafkaConfig klasse is er te zien dat de gekozen serializer ingesteld wordt. In dit geval wordt de JsonSerializer gebruikt uit de package springframework.kafka.support.serializer. Dit is dus een specifieke JsonSerializer voor Kafka. De key wordt dan weer geserializeerd naar een String door de StringSerializer uit de package org.apache.kafka.common.serialization, dit is te zien op de regel er boven. Wat als het niet lukt voor de producer om de data te verzenden? In ons geval mag hij dit niet opnieuw proberen. Op deze manier kunnen we ook te weten komen hoeveel data er mislukt is om te verzenden. Dit zie je op lijn 19. Indien je meer zekerheid wilt dat je een data object zeker verzonden wordt, dan kan je deze property in plaats van 0 op bijvoorbeeld 3 zetten. Je mag zeker ook niet vergeten om de username en password mee te geven van waar je Kafka topic zich bevindt. Op lijn 28 en 29 zie je dat dit meegegeven wordt. De username en wachtwoord worden niet in plaintext in de code geplaatst. Het is niet de bedoeling dat iedereen weet wat het wachtwoord en username is. Deze worden ingesteld in uw application.yml en worden meegegeven via de parameters van de methode door het Spring framework. Door de annotatie @Value en de naam van de key van uw waarden in de application.yml, weet Spring perfect waar hij het wachtwoord en username moet gaan halen.
      
     \subsubsection{KafkaPublisher}
     De KafkaPublisher.class is de effectieve producer van Data objecten. Veel moet er niet ingesteld worden om deze producer te doen laten werken. Wat je zeker moet hebben is een KafkaTemplate en de naam van de topic waarnaar je verzend. Laat ons even deze klasse stap voor stap bekijken.
     
-    Boven de klasse staat de annotatie @Component. Dit is opnieuw een annotatie van het spring framework. Deze zorgt ervoor dat je via constructor- of setterinjectie in andere klasses telkens dezelfde instantie van de klasse KafkaPublisher kunt gebruiken. Op die manier moet je niet telkens een nieuwe instantie maken van de klasse. Er zijn twee attributen: de kafkaTemplate van het type KafkaTemplate en een String topicName; De KafkaTemplate is een template die je gebruikt om je message naar een Kafka topic te verzenden.
+    Boven de klasse staat de annotatie @Component. Dit is opnieuw een annotatie van het Spring framework. Deze zorgt ervoor dat je via constructor- of setterinjectie in andere klasses telkens dezelfde instantie van de klasse KafkaPublisher kunt gebruiken. Op die manier moet je niet telkens een nieuwe instantie maken van de klasse. Er zijn twee attributen: de kafkaTemplate van het type KafkaTemplate en een String topicName; De KafkaTemplate is een template die je gebruikt om je message naar een Kafka topic te verzenden.
     
     In de constructor worden kafkaTemplate en topicName meegegeven als parameters. Spring Boot zorgt ervoor dat de kafkaTemplate automatisch gecreëerd wordt. De topicName willen we niet zo maar in onze code schrijven, dus injecteren we die vanuit de application.yml. Hiervoor wordt opnieuw @Value gebruikt, maar dit principe werd al eens uitgelegd.
     
@@ -231,33 +231,15 @@ Op figuur 3.2 kunt u zien hoe de configuratie van de topic is voor de gebruikte 
     
 \end{figure}
 \subsubsection{GooglePubSubConfig}
-Zo ziet de GooglePubSubConfig.class eruit. Er worden twee kanalen aangemaakt van het type MessageChannel. Deze kanalen worden gebruikt om een bericht van een topic te lezen of verzenden.
-        \begin{lstlisting}[language = Java , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+Voor Google Pub/Sub is de configuratie iets meer verschillend in vergelijking met Kafka en RabbitMq. Hier gebruiken we zowel een configuration klasse als de application.yml file. De configuratie klasse wordt aangeduid met de annotatie van Spring: @Configuration. Ook de application.yml file wordt gebruikt voor drie properties. Laat ons eerst de application.yml file overlopen. Deze wordt gebruikt om de naam van de topic in op te slaan. Want we willen ook niet hier de naam van onze topic in onze code hebben. Dan zijn er nog twee zaken die hier geconfigureert worden: spring.cloud.gcp.project.id en spring.cloud.gcp.credentials.location. Het eerste is het project id van het cloud platform waar uw Pub/Sub zich bevindt. Het tweede is het path naar de credentials file om toegang te krijgen tot de cloud platform. Al het andere configuratie werk wordt in de GooglePubSubConfig klasse gedaan. De eerste methode createBachelorproefChannelOutput geeft een MessageChannel terug. Deze heeft een annotatie @Bean die de naam 'bachelorproef-channel-output'' krijgt. Dit is letterlijk het 'kanaal' die we gaan gebruiken om onze messages te verzenden. De volgende methode geeft een MessageHandler terug en meer bepaald in dit geval een PubSubMessageHandler. Deze heeft een pubsubTemplate die je kunt vergelijken met de kafkaTemplate of rabbitTemplate. Ook wordt er verwacht dat je de naam van uw topic meegeeft. Naar deze topic zal hij de messages sturen. Zoals te zien is gebruiken we weer de @Value annotatie van het Spring framework om de naam van onze topic niet in onze code te hoeven plaatsen. Boven deze methode zie je niet alleen de annotatie @Bean maar ook @ServiceActivator met de naam van de bean uit de eerste methode. Dit zal ik zo meteen uitleggen wanneer we aan het stukje komen van de GooglePubSubPublisher interface. De derde methode returned een JacksonPubSubMessageConverter. Door deze bean aan te maken weet Spring automatisch dat hij deze klasse moet gebruiken om onze objecten om te zetten naar een Json.
+
+ \begin{lstlisting}[language = Java , frame = trBL , firstnumber = 1 , escapeinside={(*@}{@*)}]
 @Configuration
 public class GooglePubSubConfig {
-    @Bean("bachelorproef-channel-input")
-    public MessageChannel createDeviceEventChannelInput() {
-        return new DirectChannel();
-    }
     
     @Bean("bachelorproef-channel-output")
-    public MessageChannel createDeviceEventChannelOutput() {
+    public MessageChannel createBachelorproefChannelOutput() {
         return new DirectChannel();
-    }
-    
-    @Bean
-    public PubSubInboundChannelAdapter createDeviceChannelAdapter(
-    PubSubOperations pubSubTemplate,
-    @Value("${pubsub.subscription}") String subsciptionName,
-    @Qualifier("bachelorproef-channel-input") MessageChannel inputChannel,
-    @Value("${pubsub.autostartup}") Boolean autoStart) {
-        
-        final PubSubInboundChannelAdapter adapter = new PubSubInboundChannelAdapter(pubSubTemplate, subsciptionName);
-        adapter.setOutputChannel(inputChannel);
-        adapter.setAckMode(AckMode.AUTO);
-        adapter.setPayloadType(Event.class);
-        adapter.setAutoStartup(autoStart);
-        return adapter;
     }
     
     @Bean
@@ -277,8 +259,9 @@ public class GooglePubSubConfig {
 }
      \end{lstlisting}
 \subsubsection{GooglePubSubPublisher}
-Deze klasse heeft maar één methode, namelijk publishData. Deze methode verstuurd het Data-object naar de topic via het kanaal \emph{bachelorproef-channel-output}. Er hoeft geen implementatie te zijn van deze methode, het spring-framework regelt al het andere werk in jouw plaats.
-        \begin{lstlisting}[language = Java , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+Deze klasse heeft maar één methode, namelijk publishData. Deze methode verstuurd het Data-object naar de topic via het kanaal \emph{bachelorproef-channel-output}. Er hoeft geen implementatie te zijn van deze methode, het Spring-framework regelt al het andere werk in jouw plaats. Maar toch is het handig om even te verduidelijken hoe dit allemaal in zijn werk gaat. Wanneer de methode publish met een Data object opgeroepen wordt, dan verzend hij deze data via het kanaal dat beschreven staat in de annotatie @MessagingGateway. Maar deze interface kan dit werk niet op zijn eentje doen en zoekt daarom hulp in de configuratie. Als we dan nu eventjes terug gaan naar de GooglePubSubConfig klasse, dan zijn we boven de methode die een MessageHandler terug geeft de @ServiceActivator staan en dezelfde naam van het kanaal. Dus om kort samen te vatten: als de methode publish opgeropen wordt, dan kijkt hij welk kanaal hij nodig geeft om te verzenden. Dan zoekt hij een MessageHandler die geactiveerd wordt wanneer zijn kanaal nodig is. En deze handler gebruikt spring om de message dan effectief te verzenden. Omdat de bean die de MessageChannel terug geeft de naam ''bachelorproef-channel-output'' heeft, en deze naam van het kanaal ook in de annotatie @ServiceActivator staat, weet Spring dat dit kanaal gebruikt moet worden.
+
+ \begin{lstlisting}[language = Java , frame = trBL , firstnumber = 1 , escapeinside={(*@}{@*)}]
 @MessagingGateway(defaultRequestChannel = "bachelorproef-channel-output")
 @Component
 public interface GooglePubSubPublisher {
@@ -287,6 +270,401 @@ public interface GooglePubSubPublisher {
 }
      \end{lstlisting}
      
-\section{Consumer project}
-\section{Onderzoek}
+\subsection{Creëren van de data}
+Nu alle drie de technologieën klaar zijn om data te verzenden, blijft er voor deze applicatie alleen nog het creëren van de data en het verzenden ervan over. Er zijn nog drie cruciale elementen die besproken moeten worden en die zijn: de ProducerApplication- , de RandomDataProvider- en de RandomDataPublisher.
 
+\subsubsection{ProducerApplication}
+Dit is de eerste klasse die gebruikt wordt om de applicatie te starten. In de methode runner geven we via de parameters alle klasses mee die data publishen. Dit is dus een klasse voor Google Pub/Sub, Kafka en RabbitMq. Ook moeten we de klasse RandomDataPublisher meegeven. Deze klasses worden opnieuw gecreëerd door Spring Boot. In deze methode roep je de methode doStuff op van de RandomDataPublisher klasse. Wat deze methode exact doet bespreken we later. Maar je moet meegeven welke publisher je wilt gebruiken. Deze lijn code is het enige dat je moet aanpassen om data te verzenden voor één van de drie technologieën.
+
+\begin{lstlisting}[language = Java , frame = trBL , firstnumber = 1 , escapeinside={(*@}{@*)}]
+@SpringBootApplication
+@Slf4j
+public class ProducerApplication {
+    
+    public static void main(String[] args) {
+        SpringApplication.run(ProducerApplication.class, args);
+    }
+    
+    @Bean
+    public CommandLineRunner runner(final RandomDataPublisher randomDataPublisher,
+        final GooglePubSubPublisher googlePubSubPublisher,
+        final KafkaPublisher kafkaPublisher,
+        final RabbitMqPublisher rabbitMqPublisher) {
+            return args -> {
+              randomDataPublisher.doStuff(googlePubSubPublisher);
+              //   OF:         randomDataPublisher.doStuff(kafkaPublisher);
+              //   OF;         randomDataPublisher.doStuff(rabbitMqPublisher);
+        };
+    }
+}
+     \end{lstlisting}
+\subsubsection{RandomDataProvider}
+Deze klasse is een hulpklasse die de lijst van Data objecten genereert. Het aantal objecten wordt meegegeven als parameter dat ingesteld wordt in de RandomDataPublisher. De naam van het object en beschrijving is telkens de naam van het attribuut, respectievelijk name en description, plus het id eraan geplakt. Hier wordt ook een nieuwe datum gecreëerd dat dient als sendedDate.
+\begin{lstlisting}[language = Java , frame = trBL , firstnumber = 1 , escapeinside={(*@}{@*)}]
+@Component
+public class RandomDataProvider {
+    public List<Data> create(int numberOfEntries) {
+        final List<Data> dataList = new ArrayList<>();
+        for (int i = 0; i < numberOfEntries; i++) {
+            dataList.add(new Data(i, "name" + i, "description" + i, new Date()));
+        }
+        
+        return dataList;
+    }
+}
+           \end{lstlisting}
+
+\subsubsection{RandomDataPublisher}
+Wat is de bedoeling van deze klasse? Dit heeft de functionaliteit om de methode create uit de klasse RandomDataProvider op te roepen om de Data objecten te genereren en door te geven aan de juiste publisher. De constructor heeft opnieuw al de publisher klasses als parameter die gecreëerd worden door Spring Boot. Het heeft ook nog een extra parameter namelijk een instantie van de RandomDataProvider om later de create methode te kunnen gebruiken.
+
+We verdiepen ons even in de methode doStuff. Hierin wordt aan de randomDataProvider gevraagd om een aantal Data objecten te maken, in deze codevoorbeeld is dit 10000 objecten. Deze slaat hij op een lijst van het type Data. Herinnert u zich nog dat ja in de ProducerApplication klasse aan de methode doStuff de publisher moest meegeven die je wou? Hier wordt ze gebruikt. In de methode wordt er gecontroleerd van welke instantie de publisher is die je mee krijgt. Indien de publisher van Kafka of RabbitMq is dan wordt deze lijst verzonden naar de Kafka topic of de RabbitMq exchange. Is het een instantie van de publisher van Google Pub/Sub dan wordt deze lijst overlopen en één voor één verstuurt. Want de publish methode van GooglePubSubPublisher wilt maar één object en geen lijst van objecten.
+
+\begin{lstlisting}[language = Java , frame = trBL , firstnumber = 1 , escapeinside={(*@}{@*)}]
+@Component
+public class RandomDataPublisher {
+    
+    private final RandomDataProvider randomDataProvider;
+    private final KafkaPublisher kafkaPublisher;
+    private final GooglePubSubPublisher googlePubSubPublisher;
+    private final RabbitMqPublisher rabbitMqPublisher;
+    
+    public RandomDataPublisher(RandomDataProvider randomDataProvider,
+    KafkaPublisher kafkaPublisher,
+    GooglePubSubPublisher googlePubSubPublisher,
+    RabbitMqPublisher rabbitMqPublisher) {
+        this.randomDataProvider = randomDataProvider;
+        this.kafkaPublisher = kafkaPublisher;
+        this.googlePubSubPublisher = googlePubSubPublisher;
+        this.rabbitMqPublisher = rabbitMqPublisher;
+    }
+    
+    public void doStuff(Object object) {
+        final List<Data> dataList = randomDataProvider.create(10_000);
+        if(object instanceof GooglePubSubPublisher) {
+            for (Data data : dataList) {
+                googlePubSubPublisher.publishData(data);
+                System.out.printf("publishing data: %s", data);
+            }
+        } else if (object instanceof KafkaPublisher){
+            kafkaPublisher.publish(dataList);
+        } else if (object instanceof RabbitMqPublisher){
+            rabbitMqPublisher.publish(dataList);
+        }
+        
+    }
+}
+\end{lstlisting}
+
+\section{Consumer project}
+De bedoeling van deze applicatie is dat ze wanneer er iets op een topic of queue geplaatst wordt, dat ze deze informatie weer omzet en opslaat in een lokale databank. Bij het opslaan van de data wordt er meer opgeslagen dan dat er informatie binnen komt om deze te kunnen vergelijken, maar dit wordt straks duidelijker. Wanneer deze applicatie opgestart is, luistert deze voortdurend naar de topics, of naar de queue, of er messages erop geplaatst worden. Indien er een message op een topic of de queue toegekomen is, dan leest hij deze meteen uit. Deze applicatie luistert dus tegerlijkertijd naar zowel de topic van Kafka en Google Pub/Sub als naar de queue van RabbitMq. Om dit niet met elkaar te laten beïnvloeden wordt tijdens dit onderzoek enkel data verstuurd van een bepaalde technologie, bijvoorbeeld Kafka, indien de consumer applicatie niets meer leest van een andere technologie. Deze aanpak zorgt er dus voor dat data van verschillende technologiën niet door elkaar gelezen worden. We hebben in deze applicatie hetzelfde domein object van Data. Want we willen het object dat verstuurd werd op dezelfde manier terug krijgen. Door later de juiste deserializers mee te geven, moeten we ons geen zorgen maken en wordt het inkomende object automatisch gemapt naar hetzelfde domein object.
+\begin{lstlisting}[language = Java , frame = trBL , firstnumber = 1 , escapeinside={(*@}{@*)}]
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+public class Data {
+    private int id;
+    private String name;
+    private String description;
+    private Date sendedDate;
+}
+\end{lstlisting}
+
+Naast deze Data klasse hebben we ook per technologie een entity klasse en repository. Deze zorgen ervoor dat per technologie een klasse bestaat die we kunnen opslaan in onze databank. De repository zorgt ervoor dat een object van deze klasse effectief opgeslagen kan worden. De namen van deze klasses zijn: DataGPS, DataKafka en DataRMQ. Voor de repository zijn de namen van de interfaces: DataGPSRepository, DataKafkaRepository en DataRMQRepository. De implementatie van deze klasses is telkens dezelfde, maar het is nodig om deze apart te houden om in de databank de verschillende technologieën mooi apart te kunnen opslaan. Hier zullen we één entity klasse en repository uitleggen want voor de andere is het dezelfde uitleg.
+
+\subsubsection{Entity klasse}
+We bekijken het voorbeeld van de DataGPS klasse.
+\begin{lstlisting}[language = Java , frame = trBL , firstnumber = 1 , escapeinside={(*@}{@*)}]
+@Entity
+public class DataGPS {
+    
+    public DataGPS( int dataId, String name, String description, Date sendedDate, Date receivedDate, long timeDiff) {
+        this.dataId = dataId;
+        this.name = name;
+        this.description = description;
+        this.sendedDate = sendedDate;
+        this.receivedDate = receivedDate;
+        this.timeDiff = timeDiff;
+    }
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    
+    private int dataId;
+    private String name;
+    private String description;
+    private Date sendedDate;
+    private Date receivedDate;
+    private long timeDiff;
+}
+\end{lstlisting}
+Boven de klasse staat er een annotatie uit de package javax.persistence. De @Entity zorgt ervoor dat van deze klasse automatisch een tabel aangemaakt wordt in de databank. De attributen van deze klasse zullen automatisch ook de attributen zijn van deze tabel.
+
+In de constructor zien we dat alle attributen van deze klasse aanwezig zijn als parameter, behalve het attribuut id. Dit is niet nodig om in de constructor mee te geven aangezien deze waarde automatisch gecreëerd wordt. Door de annotatie @Id zeg je dat dit veld het id is van de tabel en dus uniek moet zien. Dit is eveneens de primary key van de tabel. Door de tweede annotatie @GeneratedValue zorg je ervoor dat er automatisch een waarde aangemaakt wordt die uniek is. Je moet je dus voor de rest niets meer aantrekken van dit attribuut.
+
+\subsubsection{Repository}
+Ook hier bekijken we het voorbeeld van de DataGPSRepository.
+\begin{lstlisting}[language = Java , frame = trBL , firstnumber = 1 , escapeinside={(*@}{@*)}]
+public interface DataGPSRepository extends CrudRepository<DataGPS, Long> {
+}
+\end{lstlisting}
+U ziet dat op het eerste zicht lijkt alsof deze klasse geen implementatie heeft. Toch kan je bij deze repository bijvoorbeeld de methode save(DataGPS data) oproepen om een object van de klasse DataGPS op te slaan. Dit komt omdat deze interface extends van de interface CrudRepository<T, ID>. Deze interface zorgt ervoor dat je een object van de klasse, die je meegeeft in de plaats van T, de basisoperaties kunt uitvoeren zoals save.
+
+\subsection{Kafka}
+\subsubsection{KafkaConfig}
+Eerst en vooral zijn er opnieuw enkele waardes die we liever niet weergeven. In dit geval zijn er vier waardes: de  naam van de topic, het bootstrapadres (het adres waar de server zich bevindt), een key en een secret. Sommige van deze variabelen zullen gebruikt worden in de application.yml file waar ook deze vier waardes zich bevinden. Anderen, zoals de topic, worden dan weer gebruikt in de implementatie zelf. De namen die we aan deze variabelen gegeven hebben in dit project zijn: kafka.topic.name (voor de naam van de topic), kafka.bootstrapAddress (voor het bootstrapadres), kafka\textunderscore key en kafka\textunderscore secret (voor de key en de secret).
+
+Verder wordt er voor de configuratie enkel de application.yml gebruikt en dus geen aparte KafkaConfig klasse. Dit is hoe de configuratie er uit ziet voor Kafka:
+\begin{lstlisting}[language = xml , frame = trBL , firstnumber = 1 , escapeinside={(*@}{@*)}]
+spring:
+    kafka:
+        consumer:
+            bootstrap-servers: ${kafka.bootstrapAddress}
+            group-id: foo
+            auto-offset-reset: latest
+            key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+        properties:
+            ssl.endpoint.identification.algorithm: https
+            sasl.mechanism: PLAIN
+            request.timeout.ms: 20000
+            retry.backoff.ms: 500
+            sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username="${kafka_key}" password="${kafka_secret}";
+            security.protocol: SASL_SSL
+\end{lstlisting}
+
+We zien dat het bootstrapadres meegegeven wordt, op deze manier weet de applicatie op welke server hij moet gaan zoeken. Hier worden er geen serializers gebruikt maar deserializers, wat voor zich spreekt. Om de waarde van de Json te deserializeren wordt de StringDeserializer gebruikt uit de package org.apache.kafka.common.serialization. Voor de key te deserializeren wordt de StringDeserializer gebruikt uit dezelfde package. Verder hoeven we ons geen zorgen te maken over het deserializeren. Het Spring framework regelt al dit werk voor ons. We kunnen er dus van uit gaan als er een message binnen komt dat dit automatisch op een goede manier omgezet wordt voor ons. Verder zien we ook dat de kafka\textunderscore key en kafka\textunderscore secret variabelen gebruikt worden om het wachtwoord en gebruikersnaam mee te geven. Dit is duidelijk waarom we deze waardes niet willen bloot stellen. 
+
+\subsubsection{KafkaReceiver}
+Deze klasse is verantwoordelijk voor het ontvangen van objecten die van de Kafka topic komen. Deze klasse heeft twee attributen, een ObjectMapper en de DataKafkaRespository om de objecten op te slaan in de databank. Door deze mee te geven als parameter in de constructor zorgt Spring Boot er opnieuw voor dat deze automatisch gecreëerd wordt.
+
+Deze klasse bevat slechts één methode: listen(String message). Hier zien we dat er boven de annotatie @KafkaListener te lezen valt. Deze annotatie krijgt de naam van de topic mee en het groupId. Hierdoor weet de applicatie van waar hij moet berichten lezen. Door deze annotatie zeg je dat als er een bericht uitgelezen moet worden uit deze topic, dat je deze methode moet uitvoeren. De String die je meekrijgt als parameter werd al automatisch gedeserialiseerd door de configuratie in application.yml. 
+
+In deze methode lezen we via de objectMapper de message uit en vormen deze om naar ons domein object van het type Data, dat dezelfde klasse is van de producer applicatie. Hierna maken we een nieuwe datum aan om te registreren wat de tijd was van het uitlezen van de message. Hierna vragen we aan ons object wat de tijd was van verzenden. Dit trekken we van elkaar af en op deze manier komen we te weten hoeveel milliseconden het verschilt tussen het uitlezen van de message en het verzenden ervan. Hierna slaan we deze gegevens op als een object van de klasse DataKafka. Veel van deze informatie halen we uit de oorspronkelijke message van het type Data. Maar voor de analyse van dit onderzoek is het ook handig om extra attributen mee te geven zoals het verschil. Dan wordt de repository opgeroepen met zijn methode save die hij kan gebruiken door de interface CrudRepository. En op deze manier wordt dit object opgeslagen in de databank.
+
+\begin{lstlisting}[language = java , frame = trBL , firstnumber = 1 , escapeinside={(*@}{@*)}]
+@Component
+public class KafkaReceiver {
+    
+    private ObjectMapper objectMapper;
+    private DataKafkaRepository dataKafkaRepository;
+    
+    public KafkaReceiver(final ObjectMapper objectMapper,
+    final DataKafkaRepository dataKafkaRepository) {
+        this.objectMapper = objectMapper;
+        this.dataKafkaRepository = dataKafkaRepository;
+    }
+    
+    @KafkaListener(topics = "${kafka.topic.name}", groupId = "foo")
+    public void listen(String message) throws Exception {
+        
+        try {
+            Data data = objectMapper.readValue(message, Data.class);
+            System.out.println(data);
+            
+            Date received = new Date();
+            Date sended = data.getSendedDate();
+            
+            long difference = received.getTime() - sended.getTime();
+            
+            dataKafkaRepository.save(new DataKafka(data.getId(), data.getName(), data.getDescription(), data.getSendedDate(),received, difference));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+        System.out.println("Received Messasge in group foo: " + message);
+    }
+}
+\end{lstlisting}
+\subsection{RabbitMq}
+\subsubsection{RabbitMqConfig}
+Ook hier wordt er enkel gebruikt gemaakt van de application.yml om RabbitMq te configureren. Eerst en vooral zijn er ook hier enkele variabelen die we liever niet blootstellen. Eerst en vooral de naam van de queue, deze zal gebruikt worden tijdens de implementatie. Hiernaast willen we ook de username,  password en het hostadres niet tonen. Deze zullen gebruikt worden in deze application.yml file. De namen van deze variabelen zijn respectievelijk: rabbitmq.queue.name, rabbitmq\textunderscore username, rabbitmq\textunderscore password en rabbitmq\textunderscore host. 
+
+De rest van de configuratie ziet er als volgt uit: 
+\begin{lstlisting}[language = xml , frame = trBL , firstnumber = 1 , escapeinside={(*@}{@*)}]
+spring:
+    rabbitmq:
+        host: ${rabbitmq_host}
+        port: 16379
+        username: ${rabbitmq_username}
+        password: ${rabbitmq_password}
+        virtual-host: "rabbitmq"
+        ssl:
+            enabled: true
+            algorithm: "TLSv1.2"
+        listener:
+            simple:
+                default-requeue-rejected: false
+            direct:
+                default-requeue-rejected: false
+\end{lstlisting}
+
+Je ziet dat het hostadres meegegeven wordt, alsook de username en password.
+\subsubsection{RabbitMqReceiver}
+Deze klasse is zo goed als dezelfde als de KafkaReceiver. Het is evident dat de DataKafkaRepository vervangen is door de DataRMQRespository. Boven de methode receiveMessage staat ook een andere notatie namelijk @RabbitListener. Door deze annotatie boven de methode te zetten, weet de applicatie dat hij deze methode moet uitvoeren las er op de opgegeven queue een bericht komt. In deze methode wordt de message eerst weer omgezet in een Data object en dan opgeslagen als een DataRMQ object met de waardes van de message en het verschil tussen het verzenden en het ontvangen.
+\begin{lstlisting}[language = java , frame = trBL , firstnumber = 1 , escapeinside={(*@}{@*)}]
+@Component
+public class RabbitMqReceiver {
+    
+    private ObjectMapper objectMapper;
+    
+    private DataRMQRepository dataRMQRepository;
+    
+    public RabbitMqReceiver(final ObjectMapper objectMapper,
+    final DataRMQRepository dataRMQRepository) {
+        this.objectMapper = objectMapper;
+        this.dataRMQRepository = dataRMQRepository;
+    }
+    
+    @RabbitListener(queues = "${rabbitmq.queue.name}")
+    public void receiveMessage(String message) throws Exception {
+        try {
+            Data data = objectMapper.readValue(message, Data.class);
+            System.out.println(data);
+            
+            Date received = new Date();
+            Date sended = data.getSendedDate();
+            
+            long difference = received.getTime() - sended.getTime();
+            
+            dataRMQRepository.save(new DataRMQ(data.getId(), data.getName(), data.getDescription(), data.getSendedDate(),received, difference));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Receiving message RabbitMq: " + message);
+    }
+   
+}
+\end{lstlisting}
+\subsection{Google Pub/Sub}
+\subsubsection{GooglePubSubConfig}
+Voor Google Pub/Sub werken we met een config klasse en ook met de application.yml. Er zijn vier zaken die meegegeven worden in deze laatste file. Twee ervan worden gebruikt in de implementatie, de andere twee moet je gewoon meegeven in deze file. De twee die gebruikt worden in de implementatie zijn pubsub.subscription en pubsub.autostartup. De eerste is de naam van de subscription, de tweede is een boolean om aan te duiden of de subscriber moet starten met luisteren als de applicatie wordt opgestart of niet. De andere twee configuraties die je moet meegeven zijn: spring.cloud.gcp.project-id en spring.cloud.gcp.credentials.location. De eerste is het id van het project, de tweede is de plaats waar de credentials staan op te kunnen inloggen op het Google Cloud Platform. 
+
+De GooglePubSubConfig klasse ziet er als volgt uit:
+\begin{lstlisting}[language = java , frame = trBL , firstnumber = 1 , escapeinside={(*@}{@*)}]
+@Configuration
+public class GooglePubSubConfig {
+    
+    @Bean("bachelorproef-channel-input")
+    public MessageChannel createDeviceEventChannelInput() {
+        return new DirectChannel();
+    }
+    
+    @Bean
+    public PubSubInboundChannelAdapter createDeviceChannelAdapter(
+    PubSubOperations pubSubTemplate,
+    @Value("${pubsub.subscription}") String subsciptionName,
+    @Qualifier("bachelorproef-channel-input") MessageChannel inputChannel,
+    @Value("${pubsub.autostartup}") Boolean autoStart) {
+        
+        final PubSubInboundChannelAdapter adapter = new PubSubInboundChannelAdapter(pubSubTemplate, subsciptionName);
+        adapter.setOutputChannel(inputChannel);
+        adapter.setAckMode(AckMode.AUTO);
+        adapter.setPayloadType(Data.class);
+        adapter.setAutoStartup(autoStart);
+        return adapter;
+    }
+    
+    @Bean
+    public JacksonPubSubMessageConverter createJacksonMessageConverter(final ObjectMapper objectMapper) {
+        return new JacksonPubSubMessageConverter(objectMapper);
+    }
+\end{lstlisting}
+Boven de klasse ziet u opnieuw de annotatie @Configuration staan om aan te geven aan het Spring framework dat dit een configuratie is. Verder wordt er een nieuwe MessageChannel aangemaakt, dit is het kanaal dat de messages die ontvangen worden moeten gebruiken. Er wordt ook een naam gegeven aan dit kanaal namelijk ''bachelorproef-channel-input''. Vervolgens moet er een PubSubInboundChannelAdapter aangemaakt worden die enkele configuraties bevat. Als parameter van deze methode moet je een PubSubOperations meegeven, dit is te vergelijken met de KafkaTemplate of RabbitTemplate. Verder moet je de naam van de subscription meegeven en ook welke MessageChannel hij moet gebruiken om message te ontvangen. Via de @Qualifier annotatie zeg je dat hij de MessageChannel moet gebruiken die we daarnet aangemaakt hebben. Als laatste geef je dan nog mee of het starten met luisteren naar de topic automatisch moet gebeuren of niet. In deze methode stel je dan nog in dat de payload van de message, die een Json is, van het type Data is. Door de laatste methode, die een JacksonPubSubMessageConverter aanmaakt, kan deze Json automatisch omgezet worden in een instantie van Data.
+\subsubsection{GooglePubSubReceiver}
+Dit doet ongeveer hetzelfde als de vorige receivers. Alleen hoef je hier geen ObjectMapper te gebruiken omdat deze al is meegegeven aan de JacksonPubSubMessageConverter. Verder wordt er gebruik gemaakt van de DataGPSRepository om objecten van het type DataGPS op te slaan. 
+
+De methode storeData krijgt geen message mee in de vorm van een String, want het omzetten van de message naar een object van Data is al gebeurd door de JacksonPubSubMessageConverter. Je hebt dus meteen het Data object dat binnenkomt. Je hoeft dus enkel maar de juiste waardes op te vragen en mee te geven aan ee nieuwe DataGPS. Ook hier werd het verschil berekent tussen het verzenden en het ontvangen. Boven de methode staat de annotatie @ServiceActivator die als parameter het kanaal heeft waar messages op toekomen. Dit wil zeggen als een message langs dit kanaal binnenkomt, dat de applicatie deze methode moet uitvoeren.
+\begin{lstlisting}[language = java , frame = trBL , firstnumber = 1 , escapeinside={(*@}{@*)}]
+@Component
+public class GooglePubSubReceiver {
+    
+    private DataGPSRepository dataGPSRepository;
+    
+    public GooglePubSubReceiver(final DataGPSRepository dataGPSRepository) {
+        this.dataGPSRepository = dataGPSRepository;
+    }
+    
+    @ServiceActivator(inputChannel = "bachelorproef-channel-input")
+    public void storeData(final Data data) throws Exception {
+        System.out.println("--- Getting data: name: " + data.getName() + ", description: " + data.getDescription() +
+        ", id: " + data.getId() + ", sended: " + data.getSendedDate().toString() + ", received: " + new Date().toString() + " ---");
+        
+        
+        Date received = new Date();
+        Date sended = data.getSendedDate();
+        
+        long difference = received.getTime() - sended.getTime();
+        
+        dataGPSRepository.save(new DataGPS(data.getId(), data.getName(), data.getDescription(), data.getSendedDate(), received, difference));
+    }
+    
+}
+\end{lstlisting}
+\section{Onderzoek}
+Zoals al eerder vermeld worden de resultaten opgeslagen in een databank. De databank draait lokaal in een Docker container. Dit is de weinige configuratie die nodig is om te databank op te stellen:
+\begin{lstlisting}[language = xml , frame = trBL , firstnumber = 1 , escapeinside={(*@}{@*)}]
+spring:
+    datasource:
+        url: "jdbc:postgresql://localhost:5432/postgres"
+        username: postgres
+        password: postgres
+    jpa:
+        hibernate:
+            ddl-auto: create
+        jdbc:
+            lob:
+                non-contextual-creation: true
+\end{lstlisting}
+De URL van de databank wordt meegegeven met daarachter de naam van de databank. Daaronder geef je de gebruikersnaam en wachtwoord mee. Dit is niet erg dat het wachtwoord bloot gegeven wordt, want dit is toch een lokale databank. Verder zie je ook dat indien de applicatie opnieuw opstart, de database opnieuw gecreëerd wordt.
+
+Verder werd dit onderzoek drie keer uitgevoerd. Een keer met 10000, 100000 en 1000000 Data objecten die verzonden werden. Zo kunnen we ook vergelijken hoe sterk het tijdsverschil wordt. De bedoeling was om de methodes die de objecten ontvangen zo klein mogelijk te houden. Want hoe groter deze methodes worden, hoe langer het duurt per object om deze objecten te ontvangen en dit zou kunnen een verkeerd beeld geven anders.
+
+De resultaten per onderzoek werden per technologie opgeslagen in een CSV-file om daarna berekeningen op te kunnen doen. Dit werd gedaan met een Python script. 
+
+Eerst werd de CSV uitgelezen via de pandas library, hierna wordt er wat aan data exploratie gedaan om te controleren of de waardes die uitgelezen werden wel effectief konden kloppen. 
+\begin{lstlisting}[language = python , frame = trBL , firstnumber = 1 , escapeinside={(*@}{@*)}]
+import pandas as pd
+result = pd.read_csv('/Users/rubendesmet/Desktop/gps10_000.csv',sep=',')
+print(result.head())
+print(result.columns)
+print(result.index)
+print(result.count())
+print(result.shape)
+\end{lstlisting}
+
+Vervolgens worden de kolommen die niet van toepassing zijn verwijderd. Enkel de tabel timeDiff zou moeten overblijven die het verschil van de ontvangen en verzonden tijd voorstelt. Daarna kijken we hoeveel rijen er in de tabel zitten, worden eventuele NaN verwijderd, en kijken we nog eens hoeveel rijen er in de tabel zitten. Als laatste controlemiddel printen we nog eens de eerste vijf rijen af en kunnen we ook zijn of we kolommen vergeten verwijderen zijn. 
+
+\begin{lstlisting}[language = python , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+print(result.count())
+result = result.dropna()
+print(result.count())
+print(result.head())
+\end{lstlisting}
+
+Dan rest ons nog één ding. Dit is het berekenen van het gemiddelde van deze kolom, samen met het minimum en maximum.
+\begin{lstlisting}[language = python , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+print(result['timeDiff'].mean())
+print(result['timeDiff'].max())
+print(result['timeDiff'].min())
+\end{lstlisting}
+Al deze stappen worden dus negen keer uitgevoerd. Drie keer per technologie en drie keer per hoeveelheid verzonden data.
+
+\subsubsection{Tweede deel van het onderzoek}
+Na dat dit allemaal onderzocht was, werd er beslist de onderzoeker dat we ook nog het gebruikte memory zouden onderzoeken. Hiervoor moest er niets aangepast worden aan de producer applicatie, maar wel aan de consumer applicatie. 
+
+\begin{lstlisting}[language = python , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+// Get the Java runtime
+Runtime runtime = Runtime.getRuntime();
+// Run the garbage collector
+runtime.gc();
+// Calculate the used memory
+long memory = runtime.totalMemory() - runtime.freeMemory();
+
+memory = bytesToMegabytes(memory);
+\end{lstlisting}
+Per receiver werd er deze code aan toegevoegd die de gebruikte memory achterhaalde. Dit resultaat werd dan ook meegegeven bij het aanmaken van een object van een entity en zo mee opgeslagen. Dit wil zeggen dat er in DataGPS, DataKafka en DataRMQ een attribuut memory bijkwam. Bij de resultaten van dit gedeelte van het onderzoek werden enkel rekening gehouden met de memory. Kijken naar het verschil tussen het verzenden en ontvangen in tijd was niet meer nodig. Het ophalen van het gebruik van memory neemt namelijk zo veel tijd in beslag dat het tijdsverschil niet meer relevant was om te bekijken.
+
+Door dit nieuwe gedeelte van het onderzoek kwamen er 3 CSV bestanden bij. Eén bestand per technologie die de memory berekent. Er werd gekozen om telkens maar 1000 objecten te verzenden. Er kwamen dus ook drie nieuwe Python-scripts bij. Ook één per technologie die het gemiddelde, maximum en minimum van de memory berekende per technologie. Het opbouw van deze script is gelijkaardig met het berekenen van het gemiddelde tijdsverschil. Maar in plaats van het tijdsverschil werd enkel de kolom met de memory bijgehouden.  
