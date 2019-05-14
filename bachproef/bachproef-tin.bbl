@@ -254,27 +254,6 @@
       \field{year}{2017}
       \field{dateera}{ce}
     \endentry
-    \entry{lombok}{online}{}
-      \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=cc6220f96576cc20a6a7ed9db86a9212}{%
-           family={lombok},
-           familyi={l\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {https://projectlombok.org/features/all}%
-      }
-      \strng{namehash}{cc6220f96576cc20a6a7ed9db86a9212}
-      \strng{fullhash}{cc6220f96576cc20a6a7ed9db86a9212}
-      \strng{bibnamehash}{cc6220f96576cc20a6a7ed9db86a9212}
-      \strng{authorbibnamehash}{cc6220f96576cc20a6a7ed9db86a9212}
-      \strng{authornamehash}{cc6220f96576cc20a6a7ed9db86a9212}
-      \strng{authorfullhash}{cc6220f96576cc20a6a7ed9db86a9212}
-      \field{sortinit}{l}
-      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
-      \field{labeldatesource}{nodate}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-    \endentry
     \entry{McClelland2019}{online}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=9119b7ce5b8dd439389031fc03556578}{%

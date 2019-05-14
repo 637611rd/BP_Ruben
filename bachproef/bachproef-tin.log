@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.23)  12 MAY 2019 18:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.23)  14 MAY 2019 17:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1736,18 +1736,18 @@ Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 38.
  [4
 
-]
+])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 65.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 65.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 65.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 40.
- [5])
+(babel)             in language  on input line 65.
+ [5]
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 68.
 Package babel Info: Redefining dutch shorthand "~
@@ -2884,16 +2884,20 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 126.
 
 LaTeX Warning: There were multiply-defined labels.
 
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
 Package logreq Info: Writing requests to 'bachproef-tin.run.xml'.
 \openout1 = `bachproef-tin.run.xml'.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 126.
  ) 
 Here is how much of TeX's memory you used:
- 40009 strings out of 492649
- 740208 string characters out of 6129622
+ 40007 strings out of 492649
+ 740152 string characters out of 6129622
  1449848 words of memory out of 5000000
- 42410 multiletter control sequences out of 15000+600000
+ 42409 multiletter control sequences out of 15000+600000
  599189 words of font info for 227 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,12n,69p,10420b,3825s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2907,10 +2911,10 @@ ist/fonts/type1/urw/avantgar/uagko8a.pfb></usr/local/texlive/2018/texmf-dist/fo
 nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on bachproef-tin.pdf (69 pages, 1892514 bytes).
+Output written on bachproef-tin.pdf (69 pages, 1893769 bytes).
 PDF statistics:
- 1387 PDF objects out of 1440 (max. 8388607)
- 1188 compressed objects within 12 object streams
- 634 named destinations out of 1000 (max. 500000)
+ 1386 PDF objects out of 1440 (max. 8388607)
+ 1187 compressed objects within 12 object streams
+ 633 named destinations out of 1000 (max. 500000)
  38333 words of extra memory for PDF output out of 42996 (max. 10000000)
 
