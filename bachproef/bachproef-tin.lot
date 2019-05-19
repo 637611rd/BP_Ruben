@@ -9,23 +9,25 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.1}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - Google Pub/Sub}}{53}{table.4.1}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.2}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - Kafka}}{54}{table.4.2}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - Google Pub/Sub}}{55}{table.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.3}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - RabbitMq}}{54}{table.4.3}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - Kafka}}{56}{table.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.4}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - Google Pub/Sub}}{56}{table.4.4}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - RabbitMq}}{56}{table.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.5}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - Kafka}}{56}{table.4.5}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - Google Pub/Sub}}{58}{table.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.6}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - RabbitMq}}{56}{table.4.6}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - Kafka}}{58}{table.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.7}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - Google Pub/Sub}}{58}{table.4.7}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - RabbitMq}}{58}{table.5.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.8}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - Kafka}}{58}{table.4.8}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - Google Pub/Sub}}{60}{table.5.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.9}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - RabbitMq}}{59}{table.4.9}
+\contentsline {table}{\numberline {5.8}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - Kafka}}{60}{table.5.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.9}{\ignorespaces Verschil tussen ontvangen en verzenden (in ms) - RabbitMq}}{61}{table.5.9}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \contentsfinish 
