@@ -155,7 +155,6 @@ public class RandomDataPublisher {
             if(object instanceof GooglePubSubPublisher) {
                 for (Data data : dataList) {
                     googlePubSubPublisher.publishData(data);
-                    System.out.printf("publishing data: %s", data);
                 }
             } else if (object instanceof KafkaPublisher){
                 kafkaPublisher.publish(dataList);

@@ -309,7 +309,7 @@ Deze klasse is verantwoordelijk voor het ontvangen van objecten die van de Kafka
 
 Deze klasse bevat slechts één methode: listen(String message). Hier zien we dat er boven de annotatie @KafkaListener te lezen valt. Deze annotatie krijgt de naam van de topic mee en het groupId. Hierdoor weet de applicatie van waar hij berichten moet lezen. Door deze annotatie zeg je dat als er een bericht uitgelezen moet worden uit deze topic, dat je deze methode moet uitvoeren. De String die de methode meekrijgt als parameter werd al automatisch gedeserialiseerd door de configuratie in application.yml. 
 
-In deze methode lezen we via de objectMapper de message uit en vormen deze om naar ons domeinobject van het type Data, dat dezelfde klasse is als bij de producer applicatie. Hierna maken we een nieuwe datum aan om te registreren wat de tijd was van het uitlezen van de message. Hierna vragen we aan ons object wat de tijd was van verzenden. Dit trekken we van elkaar af en op deze manier komen we te weten hoeveel milliseconden het verschilt tussen het uitlezen van de message en het verzenden ervan. Vervolgens slaan we deze gegevens op als een object van de klasse DataKafka. Veel van deze informatie halen we uit de oorspronkelijke message van het type Data. Maar voor de analyse van dit onderzoek is het ook handig om extra attributen mee te geven zoals het verschil. Daarna wordt de methode save uit de repository uitgevoerd. Op deze manier wordt dit object opgeslagen in de databank.
+In deze methode roepen we de private hulpmethode readMessage(String message) aan. Hierin lezen we via de objectMapper de message uit en vormen deze om naar ons domeinobject van het type Data, dat dezelfde klasse is als bij de producer applicatie. Hierna maken we een nieuwe datum aan om te registreren wat de tijd was van het uitlezen van de message. Hierna vragen we aan ons object wat de tijd was van verzenden. Dit trekken we van elkaar af en op deze manier komen we te weten hoeveel milliseconden het verschilt tussen het uitlezen van de message en het verzenden ervan. Vervolgens slaan we deze gegevens op als een object van de klasse DataKafka. Veel van deze informatie halen we uit de oorspronkelijke message van het type Data. Maar voor de analyse van dit onderzoek is het ook handig om extra attributen mee te geven zoals het verschil. Daarna wordt de methode save uit de repository uitgevoerd. Op deze manier wordt dit object opgeslagen in de databank.
 
 \begin{lstlisting}[language = java , frame = trBL , firstnumber = 1 , escapeinside={(*@}{@*)}]
 @Component
@@ -326,10 +326,8 @@ public class KafkaReceiver {
 
     @KafkaListener(topics = "${kafka.topic.name}", groupId = "foo")
     public void listen(String message) throws Exception {
-
-            try {
-                Data data = objectMapper.readValue(message, Data.class);
-                System.out.println(data);
+           
+                Data data = readMessage(message);
 
                 Date received = new Date();
                 Date sended = data.getSendedDate();
@@ -337,11 +335,7 @@ public class KafkaReceiver {
                 long difference = received.getTime() - sended.getTime();
 
                 dataKafkaRepository.save(new DataKafka(data.getId(), data.getName(), data.getDescription(), data.getSendedDate(),received, difference));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
 
-        System.out.println("Received Messasge in group foo: " + message);
     }
 }
 \end{lstlisting}
@@ -387,9 +381,8 @@ public class RabbitMqReceiver {
 
     @RabbitListener(queues = "${rabbitmq_queue_name}")
     public void receiveMessage(String message) throws Exception {
-       try {
-            Data data = objectMapper.readValue(message, Data.class);
-            System.out.println(data);
+      
+            Data data = readMessage(message);
 
             Date received = new Date();
             Date sended = data.getSendedDate();
@@ -397,11 +390,8 @@ public class RabbitMqReceiver {
             long difference = received.getTime() - sended.getTime();
 
             dataRMQRepository.save(new DataRMQ(data.getId(), data.getName(), data.getDescription(), data.getSendedDate(),received, difference));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-         System.out.println("Receiving message RabbitMq: " + message);
-        }
+
+    }
 }
 \end{lstlisting}
 \subsection{Google Pub/Sub}
@@ -456,10 +446,7 @@ public class GooglePubSubReceiver {
 
     @ServiceActivator(inputChannel = "bachelorproef-channel-input")
     public void storeData(final Data data) throws Exception {
-        System.out.println("--- Getting data: name: " + data.getName() + ", description: " + data.getDescription() +
-        ", id: " + data.getId() + ", sended: " + data.getSendedDate().toString() + ", received: " + new Date().toString() + " ---");
-
-
+       
         Date received = new Date();
         Date sended = data.getSendedDate();
 
