@@ -1,0 +1,12 @@
+%%=============================================================================
+%% Conclusie
+%%=============================================================================
+
+\chapter{Besluit}
+\label{ch:besluit}
+
+Wanneer snelheid voor een bedrijf het belangrijkste is, dan lijkt Google Pub/Sub het beste. Tenzij je heel veel objecten hebt (meer dan 1 000 000) dan lijkt RabbitMq sneller te werken. Het memory gebruik is het best bij RabbitMq maar Kafka doet het niet veel slechter. Bij Kafka ben je het meest zeker dat je effectief al je verzonden data meteen ontvangt. Hier slaagt RabbitMq het slechtste op.
+
+Voor TVH specifiek lijkt het belangrijkste dat alle data zeker meteen ontvangen wordt. Omdat Kafka hierop het beste scoort en bijna de beste is op basis van memory gebruik, lijkt Kafka de beste technologie om te gebruiken binnen dit bedrijf.
+
+Een verder onderzoek zou dit onderzoek enkele keren kunnen herhalen om te bepalen hoe frequent verzonden data niet meteen aankomt. Ook zouden we de applicaties in een ander onderzoek in de cloud kunnen laten draaien zodat deze niet afhankelijk zijn van een lokale pc of laptop.

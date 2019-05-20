@@ -25,11 +25,11 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Configuratie van de topic}}{31}{figure.3.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Configuratie van de topic voor de gebruikte subscription}}{37}{figure.3.2}
-\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Configuratie van de topic}}{38}{figure.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Configuratie van de topic voor de gebruikte subscription}}{44}{figure.4.2}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
@@ -40,6 +40,8 @@
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Vergelijking bij 1 000 000 objecten}}{61}{figure.5.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Vergelijking memory}}{63}{figure.5.4}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \contentsfinish 
