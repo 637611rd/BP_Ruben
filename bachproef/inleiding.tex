@@ -7,7 +7,7 @@
 
 Dit onderzoek wordt uitgevoerd op vraag van het bedrijf TVH. Dit is een familiebedrijf dat oorspronkelijk opgericht is door Paul Thermote en Paul Vanhalst in 1969. Ze startten in een schuur waar ze kapotte landbouwmachines en forklifts repareerden. Later verkochten ze ook deze tweedehands machines. Vervolgens startten ze snel met het verhuren van deze werktuigen. Enkele jaren later was het begin van de verkoop van vervangonderdelen voor machines. Nadien werden er nog een paar bedrijven overgenomen waardoor het bedrijf uitgroeide tot het grote bedrijf dat we vandaag de dag kennen. 
 
-Maar wat is het nut van dit onderzoek voor TVH? Zoals je overal ziet, is internet bijna nergens meer weg te denken. Ook voor dit bedrijf kan internet enkele voordelen bieden. TVH verzamelt en verzendt voornamelijk informatie. Dit wordt later verder uitgelegd in sectie 2.6.
+Wat is het nut van dit onderzoek voor TVH? Zoals je overal ziet, is internet bijna nergens meer weg te denken. Ook voor dit bedrijf kan internet enkele voordelen bieden. TVH verzamelt en verzendt voornamelijk informatie. Dit wordt later verder uitgelegd in sectie 2.6.
 
 Al deze informatie die verstuurd wordt van de machines, wordt samengebracht en verwerkt. Een voorbeeld van informatie is een machine die stuurt dat zijn sleutel aan staat. De IoT-applicatie die deze informatie daadwerkelijk zal verwerken heeft een grote verantwoordelijkheid. Het is namelijk belangrijk dat er geen data verloren gaat bij het verzenden en dat de data heel snel verwerkt kan worden. Er zijn enkele software mogelijkheden om met deze informatie om te gaan. Dit onderzoek zal nagaan welke technologie het beste is om te gebruiken voor TVH met zijn specifieke data.
 
@@ -19,12 +19,12 @@ Doordat dit onderzoek zal aantonen welke technologie de beste zal zijn, ontstaan
 \section{Probleemstelling}
 \label{sec:probleemstelling}
 
-Als technologie werd er vroeger binnen het bedrijf \emph{RabbitMq} gebruikt. Ondertussen zijn alle teams overgeschakeld naar een andere technologie namelijk \emph{Kafka}. Oorspronkelijk was het dus de bedoeling van dit onderzoek om deze twee met elkaar te vergelijken en te concluderen dat TVH al dan niet de juiste beslissing had gemaakt om over te schakelen naar \emph{Kafka}. Ondertussen ben ik ook al gestart met mijn stage binnen TVH waarbij ik deel uitmaak van een student-squad. Binnen ons team gebruiken wij \emph{Kafka} noch \emph{RabbitMq}. Wij gebruiken een derde mogelijkheid, namelijk \emph{Google Pub/Sub}, alle andere teams hebben nog steeds \emph{Kafka} als technologie. Er zijn dus verschillende technologieën die gebruikt worden binnen dit bedrijf, waarbij niemand weet welke nu eigenlijk het beste is om te gebruiken. 
+Als technologie werd er vroeger binnen het bedrijf \emph{RabbitMq} gebruikt. Ondertussen zijn alle teams overgeschakeld naar een andere technologie namelijk \emph{Kafka}. Oorspronkelijk was het dus de bedoeling van dit onderzoek om deze twee met elkaar te vergelijken en te concluderen dat TVH al dan niet de juiste beslissing had gemaakt om over te schakelen naar \emph{Kafka}. Ondertussen ben ik ook al gestart met mijn stage binnen TVH waarbij ik deel uitmaak van een student-squad. Binnen ons team gebruiken wij \emph{Kafka} noch \emph{RabbitMq}. Wij gebruiken een derde mogelijkheid, namelijk \emph{Google Pub/Sub}. Alle andere teams hebben nog steeds \emph{Kafka} als technologie. Er zijn dus verschillende technologieën die gebruikt worden binnen dit bedrijf, waarbij niemand weet welke nu eigenlijk het beste is om te gebruiken. 
 
 \section{Onderzoeksvraag}
 \label{sec:onderzoeksvraag}
 
-De bedoeling van dit onderzoek is deze drie technologieën vergelijken en concluderen welke ervan de beste blijkt te zijn. Zo komt het bedrijf te weten of het handig zou zijn om in elk team te blijven werken met \emph{Kafka} of om terug over te schakelen naar een andere technologie. 
+De bedoeling van dit onderzoek is deze drie technologieën vergelijken en concluderen welke ervan de beste blijkt te zijn. Zo komt het bedrijf te weten of het handig zou zijn om in elk team te blijven werken met \emph{Kafka} of om terug over te schakelen naar een andere technologie. De concrecte onderzoeksvraag is dus: Welke technologie is het beste om binnen TVH data van microservices te gebruiken?
 
 \section{Onderzoeksdoelstelling}
 \label{sec:onderzoeksdoelstelling}
@@ -45,8 +45,10 @@ In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand v
 In Hoofdstuk~\ref{ch:methodologie} wordt de methodologie toegelicht en worden de gebruikte onderzoekstechnieken besproken om een antwoord te kunnen formuleren op de onderzoeksvragen.
 
 % TODO: Vul hier aan voor je eigen hoofstukken, één of twee zinnen per hoofdstuk
-In Hoofdstuk~\ref{ch:proof-of-concept} wordt het onderzoek gevoerd op een bepaald voorbeeld. Hier zullen er resultaten uit komen die besproken zullen worden in de conclusie.
+In Hoofdstuk~\ref{ch:proof-of-concept} wordt het onderzoek gevoerd op een bepaald voorbeeld. Hier zullen er resultaten uit komen die besproken worden in de conclusie.
 
-In Hoofdstuk~\ref{ch:conclusie}, tenslotte, wordt de conclusie gegeven en een antwoord geformuleerd op de onderzoeksvragen. 
-%Daarbij wordt ook een aanzet gegeven voor toekomstig onderzoek binnen dit domein.
+In Hoofdstuk~\ref{ch:conclusie}, wordt de conclusie gegeven op basis van de resultaten uit het onderzoek.
+
+In Hoofdstuk~\ref{ch:besluit}, tenslotte, wordt er een antwoord geformuleerd op de onderzoeksvraag.  Daarbij wordt ook een aanzet gegeven voor toekomstig onderzoek binnen dit domein.
+%
 
