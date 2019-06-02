@@ -51,11 +51,12 @@
 % The widths of these boxes can be easily edited to accommodate your content as you see fit
 
 \begin{minipage}[t]{0.75\linewidth}
-\VeryHuge \color{HoGentAccent1} \textbf{Titel van uw bachelorproef} \color{Black}\\ % Title
-\Huge\textit{Ondertitel (eventueel)}\\[2.4cm] % Subtitle
-\huge \textbf{Naam Voornaam, co-promotor, promotor}\\[0.5cm] % Author(s)
+\VeryHuge \color{HoGentAccent1} \textbf{Welke technologie is het meest geschikt om in een IoT-applicatie data van microservices te gebruiken?} \color{Black}\\ % Title
+%\Huge\textit{Ondertitel (eventueel)}\\
+[2.4cm] % Subtitle
+\huge \textbf{Desmet Ruben, Meersseman Maarten, Vandermeersch Sonia}\\[0.5cm] % Author(s)
 \huge Hogeschool Gent, Valentin Vaerwyckweg 1, 9000 Gent\\[0.4cm] % University/organization
-\Large \texttt{voornaam.naam@hogent.be} \\
+\Large \texttt{ruben.desmet.y7611@student.hogent.be} \\
 \end{minipage}
 %
 \begin{minipage}[t]{0.25\linewidth}
@@ -88,15 +89,9 @@ The nose? On second thoughts, let's not go there. It is a silly place. Bloody Pe
 \section*{Introductie}
 \color{black}
 \color{black}
-Be quiet! Found them? In Mercia?! The coconut's tropical! But you are dressed as one… Well, what do you want? Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods.
+Tijdens dat ik dit onderzoek voerde, liep ik ook mijn stage in het bedrijf TVH. Al snel dit academiejaar kwam ik te weten dat ik hier mijn eerste werkervaring mocht opdoen. Toen er gevraagd werd om een onderwerp te zoeken voor deze bachelorproef, leek het mij handig om een onderzoek te voeren die interessant was voor TVH. Na een brainstorm-sessie met mijn stagementor en de product-owner van mijn stage kwam ik tot dit onderwerp.
 
-Well, what do you want? It's only a model. Camelot! We found them. We shall say 'Ni' again to you, if you do not appease us.
-
-The nose? Shut up! Burn her! I am your king. You don't vote for kings.
-
-You can't expect to wield supreme power just 'cause some watery tart threw a sword at you! Well, we did do the nose. I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave before I am forced to taunt you a second time!
-
-Why do you think that she is a witch? We want a shrubbery!! I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave before I am forced to taunt you a second time!
+Eerst wist ik nog helemaal niets over dit onderwerp. Gezien ik op mijn stage ook met een event-bus werk, was dit een ideaal moment om zaken bij te leren. Ons team van de stage gebruikt die van Google, namelijk Google Pub/Sub. Andere teams gebruiken Kafka en ik vernam dat vroeger ook nog RabbitMq gebruikt werd. Het leek mij ideaal om te onderzoeken welke technologie nu eigenlijk beter is.
 %----------------------------------------------------------------------------------------
 %	GEOLOGY
 %----------------------------------------------------------------------------------------
@@ -105,25 +100,39 @@ Why do you think that she is a witch? We want a shrubbery!! I don't want to talk
 \color{HoGentAccent1} 
 \section*{Experimenten}
 \color{black}
-A newt? Camelot! Why? No, no, no! Yes, yes. A bit. But she's got a wart.
+Dit onderzoek vergelijkt drie verschillende technologieën met elkaar. Deze zijn Kafka, Google Pub/Sub en RabbitMq. Om te testen welke van de technologieën die in dit onderzoek aan bod komen nu eigenlijk het beste is, zou je met veel zaken rekening moeten houden. Wat het beste is hangt vooral af van welke soort data je gebruikt. Ook de hoeveelheid transformaties die je data ondergaat voor dat ze uitgelezen worden of verzonden speelt een grote rol. Natuurlijk is het moeilijk om binnen de tijdspanne die er is voor dit onderzoek al deze factoren te gaan onderzoeken. Daarom spitst dit onderzoek zich toe op een bepaald scenario om daar conclusies uit te trekken. Voor het scenario werd er op voorhand beslist voor welk formaat van data we dit onderzoek voeren, dit zal een Json zijn. Ook zullen we het onderzoek drie keer uitvoeren, voor verschillende groottes van data. Een keer met 10 000, 100 000 en 1 000 000. Telkens wordt er gekeken hoeveel tijd er nodig is om een data object te verzenden en te ontvangen. Hierna word er gekeken naar het gebruik van memory. Hierbij wordt er geen rekening gehouden met de snelheid omdat de code die de memory ophaalt veel te veel tijd in beslag neemt.
 
-Shut up! I dunno. Must be a king. Who's that then? Look, my liege! On second thoughts, let's not go there. It is a silly place.
+Voor dit onderzoek zijn er twee grote applicaties nodig. Een producer en een consumer applicatie. De producer zorgt ervoor dat er per technologie een implementatie is waardoor een technologie data kan verzenden. In dit onderzoek zal dit voor Kafka, RabbitMq en Google Pub/Sub gebeuren. Elke keer deze applicatie opgestart wordt, zal er meegegeven worden voor welke technologie er data moet verzonden worden.
+Voor de tweede applicatie is er ook een implementatie nodig per technologie die ervoor zal zorgen dat er geluisterd wordt naar de topic/queue indien er nieuwe messages zijn. Deze verschillende consumers zullen tegelijkertijd luisteren naar hun eigen topic/queue. Deze applicatie moet dus niet apart opgestart worden.
+\begin{center}
+    \begin{minipage}[t]{0.32\linewidth}
+         \includegraphics[width= 75mm]{kafka-logo-wide.png}
+        \captionof{figure}{\color{HoGentAccent5} Logo Kafka}
+        \label{l}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.32\linewidth}
+         \includegraphics[width=75mm]{pubsub}
+        \captionof{figure}{\color{HoGentAccent5} Logo Google Pub/Sub}
+        
+    \end{minipage}
+\begin{minipage}[t]{0.32\linewidth}
+    \includegraphics[width=75mm]{rabbitmq}
+   \captionof{figure}{\color{HoGentAccent5}Logo RabbitMq} 
+\end{minipage}
+\end{center}
 
-Shut up! Will you shut up?! No, no, no! Yes, yes. A bit. But she's got a wart. He hasn't got shit all over him. It's only a model. It's only a model.
-
-Bring her forward! I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave 
 
 
 
-\color{HoGentAccent1} 
-\section*{Sectie met figuur}
-\color{black}
+%\color{HoGentAccent1} 
+%\section*{Sectie met figuur}
+%\color{black}
 
 
-\begin{center}\vspace{1cm}
-\includegraphics[width=1.0\linewidth]{grail}
-\captionof{figure}{\color{HoGentAccent5} He hasn't got shit all over him. The nose? Where'd you get the coconuts? What do you mean? We shall say 'Ni' again to you, if you do not appease us}
-\end{center}\vspace{1cm}
+%\begin{center}\vspace{1cm}
+%\includegraphics[width=1.0\linewidth]{grail}
+%\captionof{figure}{\color{HoGentAccent5} He hasn't got shit all over him. The nose? Where'd you get the coconuts? What do you mean? We shall say 'Ni' again to you, if you do not appease us}
+%\end{center}\vspace{1cm}
 
 %------------------------------------------------
 
@@ -132,7 +141,25 @@ Bring her forward! I don't want to talk to you no more, you empty-headed animal 
 \color{HoGentAccent1} 
 \section*{Conclusies}
 \color{black}
-on't underestimate the Force. Oh God, my uncle. How am I ever gonna explain this? I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. Don't be too proud of this technological terror you've constructed. The ability to destroy a planet is insignificant next to the power of the Force.
+\begin{center}\vspace{1cm}
+    \includegraphics[width=200mm]{10000Boxplot}
+    \captionof{figure}{\color{HoGentAccent5} Vergelijking bij 10 000 objecten}
+\end{center}\vspace{1cm}
+\begin{center}\vspace{1cm}
+    \includegraphics[width=200mm]{100000Boxplot}
+    \captionof{figure}{\color{HoGentAccent5} Vergelijking bij 100 000 objecten}
+\end{center}\vspace{1cm}
+\begin{center}\vspace{1cm}
+    \includegraphics[width=200mm]{1000000Boxplot}
+    \captionof{figure}{\color{HoGentAccent5} Vergelijking bij 1 000 000 objecten}
+\end{center}\vspace{1cm}
+
+\begin{center}\vspace{1cm}
+    \includegraphics[width=200mm]{memory}
+    \captionof{figure}{\color{HoGentAccent5} Vergelijking geheugen}
+\end{center}\vspace{1cm}
+Wanneer snelheid voor een bedrijf het belangrijkste is, dan lijkt Google Pub/Sub het beste. Tenzij je heel veel objecten hebt (meer dan 1 000 000) dan lijkt RabbitMq sneller te werken. Het geheugengebruik is het best bij RabbitMq maar Kafka doet het niet veel slechter. Bij Kafka ben je het meest zeker dat je effectief al je verzonden data meteen ontvangt. Hier slaagt RabbitMq het slechtste op.
+Voor TVH specifiek lijkt het belangrijkste dat alle data zeker meteen ontvangen wordt. Omdat Kafka hierop het beste scoort en bijna de beste is op basis van geheugengebruik, lijkt Kafka de beste technologie om te gebruiken binnen dit bedrijf.
 %----------------------------------------------------------------------------------------
 %	FORTHCOMING RESEARCH
 %----------------------------------------------------------------------------------------
@@ -140,9 +167,7 @@ on't underestimate the Force. Oh God, my uncle. How am I ever gonna explain this
 \section*{Toekomstig onderzoek}
 \color{black}
 
-I care. So, what do you think of her, Han? No! Alderaan is peaceful. We have no weapons. You can't possibly… I have traced the Rebel spies to her. Now she is my only link to finding their secret base.
-
-Kid, I've flown from one side of this galaxy to the other. I've seen a lot of strange stuff, but I've never seen anything to make me believe there's one all-powerful Force controlling everything. There's no mystical energy field that controls my destiny. It's all a lot of simple tricks and nonsense. You are a part of the Rebel Alliance and a traitor! Take her away! 
+Als verder onderzoek zou je dit onderzoek meerdere keren kunnen uitvoeren om te bepalen hoe frequent verzonden data niet meteen aankomt. Een andere mogelijkheid is om de applicaties niet lokaal maar in de cloud te laten draaien. Op die manier ben je niet afhankelijk van een pc of laptop.
 
 
 %----------------------------------------------------------------------------------------
